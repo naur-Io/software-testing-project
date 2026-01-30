@@ -1,0 +1,108 @@
+plugins {
+    id 'application'
+    id 'jacoco'
+    id 'info.solidsoft.pitest' version '1.19.0-rc.2'    
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation libs.junit.jupiter
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    implementation libs.guava
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
+}
+
+application {
+    mainClass = 'br.ufpe.cin.residencia.loja.cli.Main'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+run {
+    standardInput = System.in
+}
+
+test {
+    finalizedBy jacocoTestReport //ao terminar de rodar os testes, gerar relatório de cobertura
+}
+
+jacocoTestReport {
+    dependsOn test // toda vez que eu um relatório de cobertura for solicitado, precisa ter executado os testes antes
+
+    //se for escrever testes para a CLI, comentar abaixo
+    afterEvaluate {
+        classDirectories.setFrom(files(classDirectories.files.collect {
+            fileTree(dir: it, exclude: [
+                "br/ufpe/cin/residencia/loja/cli/*"
+            ])
+        }))
+    }
+    //se for escrever testes para a CLI, comentar o afterEvaluate acima
+}
+
+jacocoTestCoverageVerification {
+    violationRules {
+        rule {
+            limit {
+                counter = 'BRANCH'//LINE, CLASS, INSTRUCTION, METHOD
+                minimum = 0.7
+            }
+        }
+    }
+}
+
+pitest {
+    targetClasses = [
+        "br.ufpe.cin.residencia.loja.catalogo.*",
+        "br.ufpe.cin.residencia.loja.checkout.*",
+        //se for escrever testes para a CLI, descomentar a linha abaixo
+        //"br.ufpe.cin.residencia.loja.cli.*",
+        "br.ufpe.cin.residencia.loja.descontos.*",
+        "br.ufpe.cin.residencia.loja.dominio.*",
+        "br.ufpe.cin.residencia.loja.frete.*",
+        "br.ufpe.cin.residencia.loja.io.*",
+        "br.ufpe.cin.residencia.loja.pagamento.*",
+        "br.ufpe.cin.residencia.loja.pedidos.*",
+        "br.ufpe.cin.residencia.loja.persistencia.*",
+        "br.ufpe.cin.residencia.loja.precificacao.*"
+    ]
+    threads = 4
+    mutationThreshold = 70
+    outputFormats = ['HTML']
+    timestampedReports = false
+    junit5PluginVersion = "1.2.3"
+    mutators = [
+            'CONDITIONALS_BOUNDARY',
+            'INCREMENTS',
+            'INVERT_NEGS',
+            'MATH',
+            'NEGATE_CONDITIONALS',
+            'VOID_METHOD_CALLS',
+            'EMPTY_RETURNS',
+            'FALSE_RETURNS',
+            'TRUE_RETURNS',
+            'NULL_RETURNS',
+            'PRIMITIVE_RETURNS',
+            'CONSTRUCTOR_CALLS',
+            'INLINE_CONSTS',
+            'NON_VOID_METHOD_CALLS',
+            'REMOVE_CONDITIONALS',
+            'REMOVE_INCREMENTS',
+            'EXPERIMENTAL_ARGUMENT_PROPAGATION',
+            'EXPERIMENTAL_BIG_INTEGER',
+            'EXPERIMENTAL_NAKED_RECEIVER',
+            'EXPERIMENTAL_MEMBER_VARIABLE',
+            'EXPERIMENTAL_SWITCH'
+    ]
+    // verbose = true  //for "ClassNotFoundException: org.junit.platform.launcher.core.LauncherFactory" which should not happen
+}
