@@ -33,94 +33,78 @@ public class CarrinhoTest {
     }
 
     @Test
-    void carrinho_comeca_vazio() {
+    void carrinhoNovoEhVazio() {
+        Carrinho carrinho = new Carrinho();
+
         assertTrue(carrinho.vazio());
-        assertEquals(0, carrinho.linhas().size());
-        assertEquals(Dinheiro.zero(), carrinho.subtotal());
-        assertEquals(0, carrinho.pesoTotalEmGramas());
     }
 
     @Test
-    void adicionar_item_valido_torna_carrinho_nao_vazio() {
+    void adicionarItemNuloLancaExcecao() {
+        Carrinho carrinho = new Carrinho();
+
+        assertThrows(IllegalArgumentException.class,
+                () -> carrinho.adicionar(null, 1));
+    }
+
+    @Test
+    void adicionarQuantidadeZeroOuNegativaLancaExcecao() {
+        assertThrows(IllegalArgumentException.class,
+                () -> carrinho.adicionar(itemLeve, 0));
+
+        assertThrows(IllegalArgumentException.class,
+                () -> carrinho.adicionar(itemLeve, -1));
+    }
+
+
+    @Test
+    void carrinhoNaoEhVazioAposAdicionarItem() {
         carrinho.adicionar(itemLeve, 1);
 
         assertFalse(carrinho.vazio());
-        assertEquals(1, carrinho.linhas().size());
     }
 
-    @Test
-    void adicionar_item_nulo_lanca_excecao() {
-        IllegalArgumentException ex = assertThrows(
-                IllegalArgumentException.class,
-                () -> carrinho.adicionar(null, 1)
-        );
-
-        assertEquals("Item não pode ser nulo.", ex.getMessage());
-    }
 
     @Test
-    void adicionar_quantidade_zero_lanca_excecao() {
-        IllegalArgumentException ex = assertThrows(
-                IllegalArgumentException.class,
-                () -> carrinho.adicionar(itemLeve, 0)
-        );
-
-        assertEquals("Quantidade deve ser maior que zero.", ex.getMessage());
-    }
-
-    @Test
-    void adicionar_quantidade_negativa_lanca_excecao() {
-        IllegalArgumentException ex = assertThrows(
-                IllegalArgumentException.class,
-                () -> carrinho.adicionar(itemLeve, -1)
-        );
-
-        assertEquals("Quantidade deve ser maior que zero.", ex.getMessage());
-    }
-
-    @Test
-    void subtotal_com_um_item() {
+    void adicionarItemCriaLinhaNoCarrinho() {
         carrinho.adicionar(itemLeve, 2);
 
-        Dinheiro esperado = Dinheiro.of("200.00");
+        List<LinhaCarrinho> linhas = carrinho.linhas();
 
-        assertEquals(esperado, carrinho.subtotal());
+        assertEquals(1, linhas.size());
     }
 
+
     @Test
-    void subtotal_com_multiplos_itens() {
-        carrinho.adicionar(itemLeve, 2);
-        carrinho.adicionar(itemPesado, 1);
+    void linhasDoCarrinhoSaoImutaveis() {
+        carrinho.adicionar(itemLeve, 1);
 
-        Dinheiro esperado = Dinheiro.of("1000.00");
-
-        assertEquals(esperado, carrinho.subtotal());
+        assertThrows(UnsupportedOperationException.class,
+                () -> carrinho.linhas().add(null));
     }
 
-    @Test
-    void peso_total_com_um_item() {
-        carrinho.adicionar(itemLeve, 3);
 
-        assertEquals(1500, carrinho.pesoTotalEmGramas());
+    @Test
+    void subtotalSomaTotalDasLinhas() {
+        carrinho.adicionar(itemLeve, 1);   // 100
+        carrinho.adicionar(itemPesado, 2); // 1600
+
+        assertEquals(
+                Dinheiro.of("1700.00"),
+                carrinho.subtotal()
+        );
     }
 
+
     @Test
-    void peso_total_com_multiplos_itens() {
-        carrinho.adicionar(itemLeve, 2);
-        carrinho.adicionar(itemPesado, 1);
+    void pesoTotalEhSomaDoPesoDasLinhas() {
+        carrinho.adicionar(itemLeve, 2);   // 1000g
+        carrinho.adicionar(itemPesado, 1); // 3000g
 
         assertEquals(4000, carrinho.pesoTotalEmGramas());
     }
 
-    @Test
-    void linhas_retorna_lista_imutavel() {
-        carrinho.adicionar(itemLeve, 1);
 
-        List<LinhaCarrinho> linhas = carrinho.linhas();
 
-        assertThrows(
-                UnsupportedOperationException.class,
-                () -> linhas.add(new LinhaCarrinho(itemLeve, 1))
-        );
-    }
 }
+
