@@ -31,19 +31,19 @@ public class Pedido {
                   CodigoCupom codigoCupom, Dinheiro subtotal, Dinheiro descontoCupom,
                   Dinheiro descontoPagamento, Dinheiro imposto, Dinheiro frete, Dinheiro total,
 <span class="fc" id="L33">                  StatusPedido status) {</span>
-<span class="pc bpc" id="L34" title="1 of 4 branches missed.">        if (id == null || id.isBlank()) {</span>
+<span class="fc bfc" id="L34" title="All 4 branches covered.">        if (id == null || id.isBlank()) {</span>
 <span class="fc" id="L35">            throw new IllegalArgumentException(&quot;Id do pedido não pode ser vazio.&quot;);</span>
         }
 <span class="fc bfc" id="L37" title="All 2 branches covered.">        if (criadoEm == null) {</span>
 <span class="fc" id="L38">            throw new IllegalArgumentException(&quot;Data de criação do pedido é obrigatória.&quot;);</span>
         }
-<span class="pc bpc" id="L40" title="1 of 4 branches missed.">        if (itens == null || itens.isEmpty()) {</span>
+<span class="fc bfc" id="L40" title="All 4 branches covered.">        if (itens == null || itens.isEmpty()) {</span>
 <span class="fc" id="L41">            throw new IllegalArgumentException(&quot;Pedido deve possuir ao menos um item.&quot;);</span>
         }
-<span class="pc bpc" id="L43" title="1 of 4 branches missed.">        if (metodoFrete == null || metodoPagamento == null) {</span>
+<span class="fc bfc" id="L43" title="All 4 branches covered.">        if (metodoFrete == null || metodoPagamento == null) {</span>
 <span class="fc" id="L44">            throw new IllegalArgumentException(&quot;Frete e pagamento são obrigatórios.&quot;);</span>
         }
-<span class="pc bpc" id="L46" title="5 of 12 branches missed.">        if (subtotal == null || descontoCupom == null || descontoPagamento == null</span>
+<span class="fc bfc" id="L46" title="All 12 branches covered.">        if (subtotal == null || descontoCupom == null || descontoPagamento == null</span>
                 || imposto == null || frete == null || total == null) {
 <span class="fc" id="L48">            throw new IllegalArgumentException(&quot;Valores monetários do pedido são obrigatórios.&quot;);</span>
         }
@@ -71,7 +71,7 @@ public class Pedido {
     }
 
     public LocalDateTime getCriadoEm() {
-<span class="nc" id="L74">        return criadoEm;</span>
+<span class="fc" id="L74">        return criadoEm;</span>
     }
 
     public LocalDateTime getReembolsadoEm() {
@@ -83,35 +83,35 @@ public class Pedido {
     }
 
     public MetodoFrete getMetodoFrete() {
-<span class="nc" id="L86">        return metodoFrete;</span>
+<span class="fc" id="L86">        return metodoFrete;</span>
     }
 
     public MetodoPagamento getMetodoPagamento() {
-<span class="nc" id="L90">        return metodoPagamento;</span>
+<span class="fc" id="L90">        return metodoPagamento;</span>
     }
 
     public CodigoCupom getCodigoCupom() {
-<span class="nc" id="L94">        return codigoCupom;</span>
+<span class="fc" id="L94">        return codigoCupom;</span>
     }
 
     public Dinheiro getSubtotal() {
-<span class="nc" id="L98">        return subtotal;</span>
+<span class="fc" id="L98">        return subtotal;</span>
     }
 
     public Dinheiro getDescontoCupom() {
-<span class="nc" id="L102">        return descontoCupom;</span>
+<span class="fc" id="L102">        return descontoCupom;</span>
     }
 
     public Dinheiro getDescontoPagamento() {
-<span class="nc" id="L106">        return descontoPagamento;</span>
+<span class="fc" id="L106">        return descontoPagamento;</span>
     }
 
     public Dinheiro getImposto() {
-<span class="nc" id="L110">        return imposto;</span>
+<span class="fc" id="L110">        return imposto;</span>
     }
 
     public Dinheiro getFrete() {
-<span class="nc" id="L114">        return frete;</span>
+<span class="fc" id="L114">        return frete;</span>
     }
 
     public Dinheiro getTotal() {

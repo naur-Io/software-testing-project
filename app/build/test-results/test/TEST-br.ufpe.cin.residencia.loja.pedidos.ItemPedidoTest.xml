@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="br.ufpe.cin.residencia.loja.pedidos.ItemPedidoTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-01-31T17:12:11.615Z" hostname="DESKTOP-C0LRCO9" time="0.005">
+<testsuite name="br.ufpe.cin.residencia.loja.pedidos.ItemPedidoTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-01-31T20:14:52.515Z" hostname="DESKTOP-C0LRCO9" time="0.005">
   <properties/>
-  <testcase name="nomeEmBrancoLancaExcecao()" classname="br.ufpe.cin.residencia.loja.pedidos.ItemPedidoTest" time="0.0"/>
-  <testcase name="criaItemPedidoComDadosValidos()" classname="br.ufpe.cin.residencia.loja.pedidos.ItemPedidoTest" time="0.001"/>
+  <testcase name="nomeEmBrancoLancaExcecao()" classname="br.ufpe.cin.residencia.loja.pedidos.ItemPedidoTest" time="0.001"/>
+  <testcase name="criaItemPedidoComDadosValidos()" classname="br.ufpe.cin.residencia.loja.pedidos.ItemPedidoTest" time="0.0"/>
   <testcase name="pesoTotalCalculaPesoVezesQuantidade()" classname="br.ufpe.cin.residencia.loja.pedidos.ItemPedidoTest" time="0.0"/>
   <testcase name="skuNuloLanceException()" classname="br.ufpe.cin.residencia.loja.pedidos.ItemPedidoTest" time="0.0"/>
   <testcase name="totalCalculaPrecoVezesQuantidade()" classname="br.ufpe.cin.residencia.loja.pedidos.ItemPedidoTest" time="0.0"/>
   <testcase name="nomeNuloLancaExcecao()" classname="br.ufpe.cin.residencia.loja.pedidos.ItemPedidoTest" time="0.0"/>
   <testcase name="skuEmBrancoLancaExcecao()" classname="br.ufpe.cin.residencia.loja.pedidos.ItemPedidoTest" time="0.0"/>
-  <testcase name="quantidadeZeroOuNegativaLancaExcecao()" classname="br.ufpe.cin.residencia.loja.pedidos.ItemPedidoTest" time="0.001"/>
+  <testcase name="quantidadeZeroOuNegativaLancaExcecao()" classname="br.ufpe.cin.residencia.loja.pedidos.ItemPedidoTest" time="0.0"/>
   <testcase name="precoUnitarioNuloLancaExcecao()" classname="br.ufpe.cin.residencia.loja.pedidos.ItemPedidoTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

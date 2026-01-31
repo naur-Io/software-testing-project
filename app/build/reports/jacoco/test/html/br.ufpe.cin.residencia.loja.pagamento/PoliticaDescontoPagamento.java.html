@@ -14,14 +14,14 @@ import java.math.BigDecimal;
 
 <span class="fc bfc" id="L15" title="All 2 branches covered.">        if (metodo == MetodoPagamento.PIX) {</span>
 <span class="fc bfc" id="L16" title="All 4 branches covered.">            if (cupom != null &amp;&amp; (cupom.getCodigo() == CodigoCupom.PORCENTO10</span>
-<span class="pc bpc" id="L17" title="1 of 2 branches missed.">                    || cupom.getCodigo() == CodigoCupom.PORCENTO20_VIP)) {</span>
+<span class="fc bfc" id="L17" title="All 2 branches covered.">                    || cupom.getCodigo() == CodigoCupom.PORCENTO20_VIP)) {</span>
 <span class="fc" id="L18">                return Dinheiro.zero();</span>
             }
 <span class="fc" id="L20">            return baseParaDesconto.multiplicar(new BigDecimal(&quot;0.05&quot;));</span>
         }
 
 <span class="pc bpc" id="L23" title="1 of 2 branches missed.">        if (metodo == MetodoPagamento.BOLETO) {</span>
-<span class="pc bpc" id="L24" title="1 of 4 branches missed.">            if (cupom != null &amp;&amp; cupom.getCodigo() == CodigoCupom.DESCONTO5) {</span>
+<span class="fc bfc" id="L24" title="All 4 branches covered.">            if (cupom != null &amp;&amp; cupom.getCodigo() == CodigoCupom.DESCONTO5) {</span>
 <span class="fc" id="L25">                return Dinheiro.zero();</span>
             }
 <span class="fc" id="L27">            return baseParaDesconto.multiplicar(new BigDecimal(&quot;0.02&quot;));</span>

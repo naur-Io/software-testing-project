@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-01-31T17:12:11.482Z" hostname="DESKTOP-C0LRCO9" time="0.004">
+<testsuite name="br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-01-31T20:14:52.411Z" hostname="DESKTOP-C0LRCO9" time="0.002">
   <properties/>
-  <testcase name="obterRetornaCupomExistente()" classname="br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest" time="0.001"/>
+  <testcase name="obterRetornaCupomExistente()" classname="br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest" time="0.0"/>
   <testcase name="marcarComoUsadoNaoAfetaCupomNaoUnico()" classname="br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest" time="0.0"/>
-  <testcase name="marcarComoUsadoSoFuncionaParaUsoUnico()" classname="br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest" time="0.001"/>
-  <testcase name="obterCupomInexistenteRetornaNull()" classname="br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest" time="0.001"/>
+  <testcase name="marcarComoUsadoSoFuncionaParaUsoUnico()" classname="br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest" time="0.0"/>
+  <testcase name="obterCupomInexistenteRetornaNull()" classname="br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

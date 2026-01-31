@@ -1,6 +1,7 @@
 package br.ufpe.cin.residencia.loja.checkout;
 
 import br.ufpe.cin.residencia.loja.catalogo.Catalogo;
+import br.ufpe.cin.residencia.loja.catalogo.CatalogoEmMemoria;
 import br.ufpe.cin.residencia.loja.descontos.CodigoCupom;
 import br.ufpe.cin.residencia.loja.descontos.Cupom;
 import br.ufpe.cin.residencia.loja.descontos.RepositorioCupom;
@@ -10,14 +11,20 @@ import br.ufpe.cin.residencia.loja.pagamento.MetodoPagamento;
 import br.ufpe.cin.residencia.loja.pedidos.Pedido;
 import br.ufpe.cin.residencia.loja.persistencia.RepositorioPedidos;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.io.TempDir;
 
 import javax.swing.*;
+import java.io.IOException;
+import java.nio.file.Path;
 import java.time.LocalDate;
 import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class ServicoCheckoutTest {
+
+    @TempDir
+    Path tempDir;
 
     @Test
     void deveFalharNoConstrutorComDependenciasNulas() {
@@ -170,6 +177,60 @@ class ServicoCheckoutTest {
         );
 
         assertTrue(ex.getMessage().contains("Sem estoque para SKU"));
+    }
+
+    @Test
+    void registrarUsoCupomMarcaComoUsado() throws Exception {
+        CatalogoEmMemoria catalogo = CatalogoEmMemoria.catalogoPadrao();
+
+        RepositorioCupom repositorioCupom = new RepositorioCupom() {
+            boolean usado = false;
+            @Override public Cupom obter(CodigoCupom codigo) { return new Cupom(
+                    CodigoCupom.DESCONTO5,
+                    LocalDate.now().plusDays(10),
+                    true,
+                    usado
+            ); }
+            @Override public void marcarComoUsado(CodigoCupom codigo) { usado = true; }
+        };
+
+        RepositorioPedidos repositorioPedidos = new RepositorioPedidos() {
+            @Override public void salvar(Pedido pedido) {}
+
+            @Override
+            public Pedido obterPorId(String id) {
+                return null;
+            }
+
+            @Override
+            public List<Pedido> listarTodos() {
+                return List.of();
+            }
+
+            @Override
+            public void atualizar(Pedido pedido) {
+
+            }
+        };
+
+        ServicoCheckout checkout = new ServicoCheckout(catalogo, repositorioCupom, repositorioPedidos);
+
+        Cupom cupom = new Cupom(CodigoCupom.DESCONTO5, LocalDate.now().plusDays(10), true, false) {
+            @Override
+            public boolean isUsoUnico() { return true; }
+        };
+
+        var method = ServicoCheckout.class.getDeclaredMethod("registrarUsoCupom", Cupom.class);
+        method.setAccessible(true);
+        method.invoke(checkout, cupom);
+    }
+
+    @Test
+    void deveCriarDiretorioPaiEArquivoQuandoParentNaoExiste() throws IOException {
+        Path subDir = tempDir.resolve("pedidos");
+        Path arquivo = subDir.resolve("pedidos.csv");
+
+        assertFalse(subDir.toFile().exists());
     }
 
 

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="br.ufpe.cin.residencia.loja.descontos.PoliticaCupomTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-01-31T17:12:11.470Z" hostname="DESKTOP-C0LRCO9" time="0.01">
+<testsuite name="br.ufpe.cin.residencia.loja.descontos.PoliticaCupomTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-01-31T20:14:52.400Z" hostname="DESKTOP-C0LRCO9" time="0.01">
   <properties/>
-  <testcase name="cupomPorcento10AbaixoDoMinimoNaoDaDesconto()" classname="br.ufpe.cin.residencia.loja.descontos.PoliticaCupomTest" time="0.001"/>
+  <testcase name="cupomPorcento10AbaixoDoMinimoNaoDaDesconto()" classname="br.ufpe.cin.residencia.loja.descontos.PoliticaCupomTest" time="0.0"/>
   <testcase name="desconto50SoAplicaAcimaDe1000()" classname="br.ufpe.cin.residencia.loja.descontos.PoliticaCupomTest" time="0.0"/>
-  <testcase name="validarCupomNuloLancaExcecao()" classname="br.ufpe.cin.residencia.loja.descontos.PoliticaCupomTest" time="0.0"/>
+  <testcase name="validarCupomNuloLancaExcecao()" classname="br.ufpe.cin.residencia.loja.descontos.PoliticaCupomTest" time="0.001"/>
   <testcase name="freteGratisSoComCupomFreteGratisPadraoESubtotalMinimo()" classname="br.ufpe.cin.residencia.loja.descontos.PoliticaCupomTest" time="0.0"/>
   <testcase name="cupomNuloNaoDaDesconto()" classname="br.ufpe.cin.residencia.loja.descontos.PoliticaCupomTest" time="0.0"/>
   <testcase name="validarCupomExpiradoLancaExcecao()" classname="br.ufpe.cin.residencia.loja.descontos.PoliticaCupomTest" time="0.001"/>
   <testcase name="cupomPorcento10ComSubtotalSuficiente()" classname="br.ufpe.cin.residencia.loja.descontos.PoliticaCupomTest" time="0.001"/>
   <testcase name="cupomNuloNaoGeraFreteGratis()" classname="br.ufpe.cin.residencia.loja.descontos.PoliticaCupomTest" time="0.0"/>
-  <testcase name="desconto5SoAplicaAcimaDoMinimo()" classname="br.ufpe.cin.residencia.loja.descontos.PoliticaCupomTest" time="0.001"/>
+  <testcase name="desconto5SoAplicaAcimaDoMinimo()" classname="br.ufpe.cin.residencia.loja.descontos.PoliticaCupomTest" time="0.0"/>
   <testcase name="cupomVipTemLimiteMaximo()" classname="br.ufpe.cin.residencia.loja.descontos.PoliticaCupomTest" time="0.0"/>
   <testcase name="cupomValidoNaoLancaExcecao()" classname="br.ufpe.cin.residencia.loja.descontos.PoliticaCupomTest" time="0.001"/>
   <testcase name="cupomUsoUnicoJaUsadoLancaExcecao()" classname="br.ufpe.cin.residencia.loja.descontos.PoliticaCupomTest" time="0.001"/>

@@ -62,25 +62,46 @@ public class PedidoTest {
 
     @Test
     void construtorRejeitaIdNuloOuEmBranco() {
-        assertThrows(IllegalArgumentException.class, () ->
-                new Pedido(
-                        " ",
-                        agora,
-                        null,
-                        List.of(item),
-                        MetodoFrete.PADRAO,
-                        MetodoPagamento.CARTAO,
-                        null,
-                        Dinheiro.of("10.00"),
-                        Dinheiro.zero(),
-                        Dinheiro.zero(),
-                        Dinheiro.zero(),
-                        Dinheiro.zero(),
-                        Dinheiro.of("10.00"),
-                        StatusPedido.PAGO
-                )
-        );
+        ItemPedido item = new ItemPedido("SKU1", "Produto", Dinheiro.of("10.00"), 100, 1);
+        LocalDateTime agora = LocalDateTime.now();
+
+        // Id nulo
+        assertThrows(IllegalArgumentException.class, () -> new Pedido(
+                null,  // <--- id nulo
+                agora,
+                null,
+                List.of(item),
+                MetodoFrete.PADRAO,
+                MetodoPagamento.CARTAO,
+                null,
+                Dinheiro.of("10.00"),
+                Dinheiro.zero(),
+                Dinheiro.zero(),
+                Dinheiro.zero(),
+                Dinheiro.zero(),
+                Dinheiro.of("10.00"),
+                StatusPedido.PAGO
+        ));
+
+        // Id em branco
+        assertThrows(IllegalArgumentException.class, () -> new Pedido(
+                "  ", // <--- id em branco
+                agora,
+                null,
+                List.of(item),
+                MetodoFrete.PADRAO,
+                MetodoPagamento.CARTAO,
+                null,
+                Dinheiro.of("10.00"),
+                Dinheiro.zero(),
+                Dinheiro.zero(),
+                Dinheiro.zero(),
+                Dinheiro.zero(),
+                Dinheiro.of("10.00"),
+                StatusPedido.PAGO
+        ));
     }
+
 
     @Test
     void construtorRejeitaDataCriacaoNula() {
@@ -126,49 +147,122 @@ public class PedidoTest {
         );
     }
 
-    @Test
-    void construtorRejeitaFreteOuPagamentoNulos() {
-        assertThrows(IllegalArgumentException.class, () ->
-                new Pedido(
-                        "PED",
-                        agora,
-                        null,
-                        List.of(item),
-                        null,
-                        MetodoPagamento.CARTAO,
-                        null,
-                        Dinheiro.of("10.00"),
-                        Dinheiro.zero(),
-                        Dinheiro.zero(),
-                        Dinheiro.zero(),
-                        Dinheiro.zero(),
-                        Dinheiro.of("10.00"),
-                        StatusPedido.PAGO
-                )
-        );
-    }
+
 
     @Test
     void construtorRejeitaValoresMonetariosNulos() {
-        assertThrows(IllegalArgumentException.class, () ->
-                new Pedido(
-                        "PED",
-                        agora,
-                        null,
-                        List.of(item),
-                        MetodoFrete.PADRAO,
-                        MetodoPagamento.CARTAO,
-                        null,
-                        null,
-                        Dinheiro.zero(),
-                        Dinheiro.zero(),
-                        Dinheiro.zero(),
-                        Dinheiro.zero(),
-                        Dinheiro.of("10.00"),
-                        StatusPedido.PAGO
-                )
-        );
+        ItemPedido item = new ItemPedido("SKU1", "Produto", Dinheiro.of("10.00"), 100, 1);
+        LocalDateTime agora = LocalDateTime.now();
+
+        // subtotal nulo
+        assertThrows(IllegalArgumentException.class, () -> new Pedido(
+                "PED-1",
+                agora,
+                null,
+                List.of(item),
+                MetodoFrete.PADRAO,
+                MetodoPagamento.CARTAO,
+                null,
+                null, // <--- subtotal nulo
+                Dinheiro.zero(),
+                Dinheiro.zero(),
+                Dinheiro.zero(),
+                Dinheiro.zero(),
+                Dinheiro.of("10.00"),
+                StatusPedido.PAGO
+        ));
+
+        // descontoCupom nulo
+        assertThrows(IllegalArgumentException.class, () -> new Pedido(
+                "PED-2",
+                agora,
+                null,
+                List.of(item),
+                MetodoFrete.PADRAO,
+                MetodoPagamento.CARTAO,
+                null,
+                Dinheiro.of("10.00"),
+                null, // <--- descontoCupom nulo
+                Dinheiro.zero(),
+                Dinheiro.zero(),
+                Dinheiro.zero(),
+                Dinheiro.of("10.00"),
+                StatusPedido.PAGO
+        ));
+
+        // descontoPagamento nulo
+        assertThrows(IllegalArgumentException.class, () -> new Pedido(
+                "PED-3",
+                agora,
+                null,
+                List.of(item),
+                MetodoFrete.PADRAO,
+                MetodoPagamento.CARTAO,
+                null,
+                Dinheiro.of("10.00"),
+                Dinheiro.zero(),
+                null, // <--- descontoPagamento nulo
+                Dinheiro.zero(),
+                Dinheiro.zero(),
+                Dinheiro.of("10.00"),
+                StatusPedido.PAGO
+        ));
+
+        // imposto nulo
+        assertThrows(IllegalArgumentException.class, () -> new Pedido(
+                "PED-4",
+                agora,
+                null,
+                List.of(item),
+                MetodoFrete.PADRAO,
+                MetodoPagamento.CARTAO,
+                null,
+                Dinheiro.of("10.00"),
+                Dinheiro.zero(),
+                Dinheiro.zero(),
+                null, // <--- imposto nulo
+                Dinheiro.zero(),
+                Dinheiro.of("10.00"),
+                StatusPedido.PAGO
+        ));
+
+        // frete nulo
+        assertThrows(IllegalArgumentException.class, () -> new Pedido(
+                "PED-5",
+                agora,
+                null,
+                List.of(item),
+                MetodoFrete.PADRAO,
+                MetodoPagamento.CARTAO,
+                null,
+                Dinheiro.of("10.00"),
+                Dinheiro.zero(),
+                Dinheiro.zero(),
+                Dinheiro.zero(),
+                null, // <--- frete nulo
+                Dinheiro.of("10.00"),
+                StatusPedido.PAGO
+        ));
+
+        // total nulo
+        assertThrows(IllegalArgumentException.class, () -> new Pedido(
+                "PED-6",
+                agora,
+                null,
+                List.of(item),
+                MetodoFrete.PADRAO,
+                MetodoPagamento.CARTAO,
+                null,
+                Dinheiro.of("10.00"),
+                Dinheiro.zero(),
+                Dinheiro.zero(),
+                Dinheiro.zero(),
+                Dinheiro.zero(),
+                null, // <--- total nulo
+                StatusPedido.PAGO
+        ));
     }
+
 
     @Test
     void construtorRejeitaTotalNegativo() {
@@ -192,6 +286,8 @@ public class PedidoTest {
         );
     }
 
+
+
     @Test
     void marcarReembolsadoAtualizaStatusEData() {
         Pedido pedido = pedidoValido(StatusPedido.PAGO);
@@ -213,6 +309,100 @@ public class PedidoTest {
     }
 
     @Test
+    void construtorRejeitaItensNulosOuVazios() {
+        // Lista nula
+        assertThrows(IllegalArgumentException.class, () -> new Pedido(
+                "PED-1",
+                LocalDateTime.now(),
+                null,
+                null, // <--- itera nula
+                MetodoFrete.PADRAO,
+                MetodoPagamento.CARTAO,
+                null,
+                Dinheiro.of("10.00"),
+                Dinheiro.zero(),
+                Dinheiro.zero(),
+                Dinheiro.zero(),
+                Dinheiro.zero(),
+                Dinheiro.of("10.00"),
+                StatusPedido.PAGO
+        ));
+
+        assertThrows(IllegalArgumentException.class, () -> new Pedido(
+                "PED-1",
+                LocalDateTime.now(),
+                null,
+                List.of(), // <--- lista vazia
+                MetodoFrete.PADRAO,
+                MetodoPagamento.CARTAO,
+                null,
+                Dinheiro.of("10.00"),
+                Dinheiro.zero(),
+                Dinheiro.zero(),
+                Dinheiro.zero(),
+                Dinheiro.zero(),
+                Dinheiro.of("10.00"),
+                StatusPedido.PAGO
+        ));
+    }
+
+    @Test
+    void construtorRejeitaFreteOuPagamentoNulos() {
+        ItemPedido item = new ItemPedido("SKU1", "Produto", Dinheiro.of("10.00"), 100, 1);
+        LocalDateTime agora = LocalDateTime.now();
+
+        // Frete nulo
+        assertThrows(IllegalArgumentException.class, () -> new Pedido(
+                "PED-1",
+                agora,
+                null,
+                List.of(item),
+                null, // <--- frete nulo
+                MetodoPagamento.CARTAO,
+                null,
+                Dinheiro.of("10.00"),
+                Dinheiro.zero(),
+                Dinheiro.zero(),
+                Dinheiro.zero(),
+                Dinheiro.zero(),
+                Dinheiro.of("10.00"),
+                StatusPedido.PAGO
+        ));
+
+        // Pagamento nulo
+        assertThrows(IllegalArgumentException.class, () -> new Pedido(
+                "PED-2",
+                agora,
+                null,
+                List.of(item),
+                MetodoFrete.PADRAO,
+                null, // <--- pagamento nulo
+                null,
+                Dinheiro.of("10.00"),
+                Dinheiro.zero(),
+                Dinheiro.zero(),
+                Dinheiro.zero(),
+                Dinheiro.zero(),
+                Dinheiro.of("10.00"),
+                StatusPedido.PAGO
+        ));
+    }
+
+
+
+
+    @Test
+    void construtorRejeitaListaDeItensNulaOuVaziaW() {
+        assertThrows(IllegalArgumentException.class, () ->
+                new Pedido("PED", LocalDateTime.now(), null,
+                        List.of(), MetodoFrete.PADRAO, MetodoPagamento.CARTAO,
+                        null, Dinheiro.of("10.00"), Dinheiro.zero(), Dinheiro.zero(),
+                        Dinheiro.zero(), Dinheiro.zero(), Dinheiro.of("10.00"), StatusPedido.PAGO)
+        );
+    }
+
+
+    @Test
     void marcarReembolsadoComDataNulaLancaExcecao() {
         Pedido pedido = pedidoValido(StatusPedido.PAGO);
 
@@ -220,4 +410,11 @@ public class PedidoTest {
                 pedido.marcarReembolsado(null)
         );
     }
+
+    @Test
+    void criaPedidoComStatusEspecifico() {
+        Pedido pedido = pedidoValido(StatusPedido.REEMBOLSADO);
+        assertEquals(StatusPedido.REEMBOLSADO, pedido.getStatus());
+    }
+
 }

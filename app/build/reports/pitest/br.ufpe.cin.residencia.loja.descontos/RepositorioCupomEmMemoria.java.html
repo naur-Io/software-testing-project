@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>RepositorioCupomEmMemoria.java</h1>
+
+<table class="src">
+
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38792286_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38792286_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package br.ufpe.cin.residencia.loja.descontos;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38792286_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38792286_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38792286_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38792286_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.time.LocalDate;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38792286_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38792286_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.HashMap;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38792286_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38792286_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.Map;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38792286_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38792286_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38792286_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38792286_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>public class RepositorioCupomEmMemoria implements RepositorioCupom {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38792286_8'/>
+8
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38792286_8'>2</a>
+<span>
+
+1. &#60;init&#62; : removed call to java/util/HashMap::&#60;init&#62; &rarr; KILLED<br/>
+
+2. &#60;init&#62; : Removed assignment to member variable cupons &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    private final Map&#60;CodigoCupom, Cupom&#62; cupons = new HashMap&#60;&#62;();</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38792286_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38792286_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38792286_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38792286_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    public RepositorioCupomEmMemoria() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38792286_11'/>
+11
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38792286_11'>1</a>
+<span>
+
+1. &#60;init&#62; : removed call to java/time/LocalDate::now &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        LocalDate hoje = LocalDate.now();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38792286_12'/>
+12
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38792286_12'>8</a>
+<span>
+
+1. &#60;init&#62; : Substituted 365 with 366 &rarr; SURVIVED<br/>
+
+2. &#60;init&#62; : Substituted 0 with 1 &rarr; SURVIVED<br/>
+
+3. &#60;init&#62; : replaced call to java/util/Map::put with argument &rarr; SURVIVED<br/>
+
+4. &#60;init&#62; : removed call to br/ufpe/cin/residencia/loja/descontos/Cupom::&#60;init&#62; &rarr; SURVIVED<br/>
+
+5. &#60;init&#62; : Substituted 0 with 1 &rarr; SURVIVED<br/>
+
+6. &#60;init&#62; : removed call to java/util/Map::put &rarr; SURVIVED<br/>
+
+7. &#60;init&#62; : removed call to java/time/LocalDate::plusDays &rarr; SURVIVED<br/>
+
+8. &#60;init&#62; : replaced call to java/time/LocalDate::plusDays with receiver &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        cupons.put(CodigoCupom.PORCENTO10, new Cupom(CodigoCupom.PORCENTO10, hoje.plusDays(365), false, false));</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38792286_13'/>
+13
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38792286_13'>8</a>
+<span>
+
+1. &#60;init&#62; : replaced call to java/time/LocalDate::plusDays with receiver &rarr; SURVIVED<br/>
+
+2. &#60;init&#62; : removed call to java/time/LocalDate::plusDays &rarr; SURVIVED<br/>
+
+3. &#60;init&#62; : Substituted 365 with 366 &rarr; SURVIVED<br/>
+
+4. &#60;init&#62; : removed call to java/util/Map::put &rarr; KILLED<br/>
+
+5. &#60;init&#62; : replaced call to java/util/Map::put with argument &rarr; KILLED<br/>
+
+6. &#60;init&#62; : Substituted 0 with 1 &rarr; KILLED<br/>
+
+7. &#60;init&#62; : removed call to br/ufpe/cin/residencia/loja/descontos/Cupom::&#60;init&#62; &rarr; KILLED<br/>
+
+8. &#60;init&#62; : Substituted 0 with 1 &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        cupons.put(CodigoCupom.DESCONTO5, new Cupom(CodigoCupom.DESCONTO5, hoje.plusDays(365), false, false));</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38792286_14'/>
+14
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38792286_14'>8</a>
+<span>
+
+1. &#60;init&#62; : removed call to java/time/LocalDate::plusDays &rarr; SURVIVED<br/>
+
+2. &#60;init&#62; : replaced call to java/time/LocalDate::plusDays with receiver &rarr; SURVIVED<br/>
+
+3. &#60;init&#62; : Substituted 365 with 366 &rarr; SURVIVED<br/>
+
+4. &#60;init&#62; : removed call to java/util/Map::put &rarr; KILLED<br/>
+
+5. &#60;init&#62; : replaced call to java/util/Map::put with argument &rarr; KILLED<br/>
+
+6. &#60;init&#62; : Substituted 0 with 1 &rarr; KILLED<br/>
+
+7. &#60;init&#62; : removed call to br/ufpe/cin/residencia/loja/descontos/Cupom::&#60;init&#62; &rarr; KILLED<br/>
+
+8. &#60;init&#62; : Substituted 1 with 0 &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        cupons.put(CodigoCupom.FRETE_GRATIS, new Cupom(CodigoCupom.FRETE_GRATIS, hoje.plusDays(365), true, false));</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38792286_15'/>
+15
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38792286_15'>8</a>
+<span>
+
+1. &#60;init&#62; : removed call to br/ufpe/cin/residencia/loja/descontos/Cupom::&#60;init&#62; &rarr; SURVIVED<br/>
+
+2. &#60;init&#62; : Substituted 0 with 1 &rarr; SURVIVED<br/>
+
+3. &#60;init&#62; : replaced call to java/util/Map::put with argument &rarr; SURVIVED<br/>
+
+4. &#60;init&#62; : replaced call to java/time/LocalDate::minusDays with receiver &rarr; SURVIVED<br/>
+
+5. &#60;init&#62; : removed call to java/util/Map::put &rarr; SURVIVED<br/>
+
+6. &#60;init&#62; : removed call to java/time/LocalDate::minusDays &rarr; SURVIVED<br/>
+
+7. &#60;init&#62; : Substituted 1 with 2 &rarr; SURVIVED<br/>
+
+8. &#60;init&#62; : Substituted 0 with 1 &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        cupons.put(CodigoCupom.PORCENTO20_VIP, new Cupom(CodigoCupom.PORCENTO20_VIP, hoje.minusDays(1), false, false));</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38792286_16'/>
+16
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38792286_16'>8</a>
+<span>
+
+1. &#60;init&#62; : replaced call to java/util/Map::put with argument &rarr; SURVIVED<br/>
+
+2. &#60;init&#62; : removed call to br/ufpe/cin/residencia/loja/descontos/Cupom::&#60;init&#62; &rarr; SURVIVED<br/>
+
+3. &#60;init&#62; : Substituted 1 with 0 &rarr; SURVIVED<br/>
+
+4. &#60;init&#62; : removed call to java/util/Map::put &rarr; SURVIVED<br/>
+
+5. &#60;init&#62; : removed call to java/time/LocalDate::plusDays &rarr; SURVIVED<br/>
+
+6. &#60;init&#62; : replaced call to java/time/LocalDate::plusDays with receiver &rarr; SURVIVED<br/>
+
+7. &#60;init&#62; : Substituted 30 with 31 &rarr; SURVIVED<br/>
+
+8. &#60;init&#62; : Substituted 0 with 1 &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        cupons.put(CodigoCupom.DESCONTO50_ACIMA_1000, new Cupom(CodigoCupom.DESCONTO50_ACIMA_1000, hoje.plusDays(30), true, false));</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38792286_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38792286_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38792286_18'/>
+18
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38792286_18'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38792286_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38792286_19'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38792286_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38792286_20'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public Cupom obter(CodigoCupom codigo) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38792286_21'/>
+21
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38792286_21'>3</a>
+<span>
+
+1. obter : removed call to java/util/Map::get &rarr; KILLED<br/>
+
+2. obter : replaced return value with null for br/ufpe/cin/residencia/loja/descontos/RepositorioCupomEmMemoria::obter &rarr; KILLED<br/>
+
+3. obter : replaced call to java/util/Map::get with argument &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return cupons.get(codigo);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38792286_22'/>
+22
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38792286_22'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38792286_23'/>
+23
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38792286_23'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38792286_24'/>
+24
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38792286_24'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38792286_25'/>
+25
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38792286_25'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void marcarComoUsado(CodigoCupom codigo) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38792286_26'/>
+26
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38792286_26'>2</a>
+<span>
+
+1. marcarComoUsado : removed call to java/util/Map::get &rarr; KILLED<br/>
+
+2. marcarComoUsado : replaced call to java/util/Map::get with argument &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        Cupom cupom = cupons.get(codigo);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38792286_27'/>
+27
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38792286_27'>7</a>
+<span>
+
+1. marcarComoUsado : removed conditional - replaced equality check with true &rarr; SURVIVED<br/>
+
+2. marcarComoUsado : negated conditional &rarr; KILLED<br/>
+
+3. marcarComoUsado : removed call to br/ufpe/cin/residencia/loja/descontos/Cupom::isUsoUnico &rarr; KILLED<br/>
+
+4. marcarComoUsado : removed conditional - replaced equality check with false &rarr; KILLED<br/>
+
+5. marcarComoUsado : removed conditional - replaced equality check with false &rarr; KILLED<br/>
+
+6. marcarComoUsado : removed conditional - replaced equality check with true &rarr; KILLED<br/>
+
+7. marcarComoUsado : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        if (cupom != null &#38;&#38; cupom.isUsoUnico()) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38792286_28'/>
+28
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38792286_28'>1</a>
+<span>
+
+1. marcarComoUsado : removed call to br/ufpe/cin/residencia/loja/descontos/Cupom::marcarComoUsado &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            cupom.marcarComoUsado();</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38792286_29'/>
+29
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38792286_29'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38792286_30'/>
+30
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38792286_30'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@38792286_31'/>
+31
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@38792286_31'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@38792286_8'>8</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@38792286_8'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterCupomInexistenteRetornaNull()]</span></span> removed call to java/util/HashMap::&#60;init&#62; &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterCupomInexistenteRetornaNull()]</span></span> Removed assignment to member variable cupons &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@38792286_11'>11</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@38792286_11'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterCupomInexistenteRetornaNull()]</span></span> removed call to java/time/LocalDate::now &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@38792286_12'>12</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@38792286_12'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> Substituted 365 with 366 &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[25],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[25],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[25],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterCupomInexistenteRetornaNull()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> Substituted 0 with 1 &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[28],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[28],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[28],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterCupomInexistenteRetornaNull()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> replaced call to java/util/Map::put with argument &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[30],-mutator=org.pitest.mutationtest.engine.gregor.mutators.experimental.ArgumentPropagationMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[30],-mutator=org.pitest.mutationtest.engine.gregor.mutators.experimental.ArgumentPropagationMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[30],-mutator=org.pitest.mutationtest.engine.gregor.mutators.experimental.ArgumentPropagationMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterCupomInexistenteRetornaNull()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> removed call to br/ufpe/cin/residencia/loja/descontos/Cupom::&#60;init&#62; &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[29],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConstructorCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[29],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConstructorCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[29],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConstructorCallMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterCupomInexistenteRetornaNull()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> Substituted 0 with 1 &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[27],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[27],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[27],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterCupomInexistenteRetornaNull()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> removed call to java/util/Map::put &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[30],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[30],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[30],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterCupomInexistenteRetornaNull()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>7.<span><b>7</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> removed call to java/time/LocalDate::plusDays &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[26],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[26],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[26],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterCupomInexistenteRetornaNull()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>8.<span><b>8</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> replaced call to java/time/LocalDate::plusDays with receiver &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[26],-mutator=org.pitest.mutationtest.engine.gregor.mutators.experimental.NakedReceiverMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[26],-mutator=org.pitest.mutationtest.engine.gregor.mutators.experimental.NakedReceiverMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[26],-mutator=org.pitest.mutationtest.engine.gregor.mutators.experimental.NakedReceiverMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterCupomInexistenteRetornaNull()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@38792286_13'>13</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@38792286_13'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> replaced call to java/time/LocalDate::plusDays with receiver &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[42],-mutator=org.pitest.mutationtest.engine.gregor.mutators.experimental.NakedReceiverMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[42],-mutator=org.pitest.mutationtest.engine.gregor.mutators.experimental.NakedReceiverMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[42],-mutator=org.pitest.mutationtest.engine.gregor.mutators.experimental.NakedReceiverMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterCupomInexistenteRetornaNull()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</li> 
+</ul>
+</div></div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()]</span></span> removed call to java/util/Map::put &rarr; KILLED</span>
+</div> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> removed call to java/time/LocalDate::plusDays &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[42],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[42],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[42],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterCupomInexistenteRetornaNull()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> Substituted 365 with 366 &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[41],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[41],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[41],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterCupomInexistenteRetornaNull()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</li> 
+</ul>
+</div></div> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()]</span></span> replaced call to java/util/Map::put with argument &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()]</span></span> Substituted 0 with 1 &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>7.<span><b>7</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()]</span></span> removed call to br/ufpe/cin/residencia/loja/descontos/Cupom::&#60;init&#62; &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>8.<span><b>8</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()]</span></span> Substituted 0 with 1 &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@38792286_14'>14</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@38792286_14'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</span></span> removed call to java/util/Map::put &rarr; KILLED</span>
+</div> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> removed call to java/time/LocalDate::plusDays &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[58],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[58],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[58],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterCupomInexistenteRetornaNull()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> replaced call to java/time/LocalDate::plusDays with receiver &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[58],-mutator=org.pitest.mutationtest.engine.gregor.mutators.experimental.NakedReceiverMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[58],-mutator=org.pitest.mutationtest.engine.gregor.mutators.experimental.NakedReceiverMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[58],-mutator=org.pitest.mutationtest.engine.gregor.mutators.experimental.NakedReceiverMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterCupomInexistenteRetornaNull()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> Substituted 365 with 366 &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[57],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[57],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[57],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterCupomInexistenteRetornaNull()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</li> 
+</ul>
+</div></div> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</span></span> replaced call to java/util/Map::put with argument &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</span></span> Substituted 0 with 1 &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>7.<span><b>7</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</span></span> removed call to br/ufpe/cin/residencia/loja/descontos/Cupom::&#60;init&#62; &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>8.<span><b>8</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</span></span> Substituted 1 with 0 &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@38792286_15'>15</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@38792286_15'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> removed call to br/ufpe/cin/residencia/loja/descontos/Cupom::&#60;init&#62; &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[77],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConstructorCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[77],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConstructorCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[77],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConstructorCallMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterCupomInexistenteRetornaNull()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> Substituted 0 with 1 &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[75],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[75],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[75],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterCupomInexistenteRetornaNull()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> replaced call to java/util/Map::put with argument &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[78],-mutator=org.pitest.mutationtest.engine.gregor.mutators.experimental.ArgumentPropagationMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[78],-mutator=org.pitest.mutationtest.engine.gregor.mutators.experimental.ArgumentPropagationMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[78],-mutator=org.pitest.mutationtest.engine.gregor.mutators.experimental.ArgumentPropagationMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterCupomInexistenteRetornaNull()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> replaced call to java/time/LocalDate::minusDays with receiver &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[74],-mutator=org.pitest.mutationtest.engine.gregor.mutators.experimental.NakedReceiverMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[74],-mutator=org.pitest.mutationtest.engine.gregor.mutators.experimental.NakedReceiverMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[74],-mutator=org.pitest.mutationtest.engine.gregor.mutators.experimental.NakedReceiverMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterCupomInexistenteRetornaNull()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> removed call to java/util/Map::put &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[78],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[78],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[78],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterCupomInexistenteRetornaNull()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> removed call to java/time/LocalDate::minusDays &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[74],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[74],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[74],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterCupomInexistenteRetornaNull()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>7.<span><b>7</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> Substituted 1 with 2 &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[73],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[73],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[73],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterCupomInexistenteRetornaNull()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>8.<span><b>8</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> Substituted 0 with 1 &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[76],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[76],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[76],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterCupomInexistenteRetornaNull()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@38792286_16'>16</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@38792286_16'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> replaced call to java/util/Map::put with argument &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[94],-mutator=org.pitest.mutationtest.engine.gregor.mutators.experimental.ArgumentPropagationMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[94],-mutator=org.pitest.mutationtest.engine.gregor.mutators.experimental.ArgumentPropagationMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[94],-mutator=org.pitest.mutationtest.engine.gregor.mutators.experimental.ArgumentPropagationMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterCupomInexistenteRetornaNull()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> removed call to br/ufpe/cin/residencia/loja/descontos/Cupom::&#60;init&#62; &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[93],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConstructorCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[93],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConstructorCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[93],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConstructorCallMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterCupomInexistenteRetornaNull()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> Substituted 1 with 0 &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[91],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[91],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[91],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterCupomInexistenteRetornaNull()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> removed call to java/util/Map::put &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[94],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[94],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[94],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterCupomInexistenteRetornaNull()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> removed call to java/time/LocalDate::plusDays &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[90],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[90],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[90],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterCupomInexistenteRetornaNull()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> replaced call to java/time/LocalDate::plusDays with receiver &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[90],-mutator=org.pitest.mutationtest.engine.gregor.mutators.experimental.NakedReceiverMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[90],-mutator=org.pitest.mutationtest.engine.gregor.mutators.experimental.NakedReceiverMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[90],-mutator=org.pitest.mutationtest.engine.gregor.mutators.experimental.NakedReceiverMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterCupomInexistenteRetornaNull()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>7.<span><b>7</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> Substituted 30 with 31 &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[89],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[89],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[89],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterCupomInexistenteRetornaNull()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>8.<span><b>8</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> Substituted 0 with 1 &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[92],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[92],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=<init>,-methodDesc=()V],-indexes=[92],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterCupomInexistenteRetornaNull()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@38792286_21'>21</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@38792286_21'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>obter<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()]</span></span> removed call to java/util/Map::get &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>obter<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()]</span></span> replaced return value with null for br/ufpe/cin/residencia/loja/descontos/RepositorioCupomEmMemoria::obter &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>obter<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()]</span></span> replaced call to java/util/Map::get with argument &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@38792286_26'>26</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@38792286_26'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>marcarComoUsado<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</span></span> removed call to java/util/Map::get &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>marcarComoUsado<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()]</span></span> replaced call to java/util/Map::get with argument &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@38792286_27'>27</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@38792286_27'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>marcarComoUsado<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>marcarComoUsado<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</span></span> removed call to br/ufpe/cin/residencia/loja/descontos/Cupom::isUsoUnico &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>marcarComoUsado<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</span></span> removed conditional - replaced equality check with false &rarr; KILLED</span>
+</div> <p class='SURVIVED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>marcarComoUsado<br/><b>Killed by : </b>none</span></span> removed conditional - replaced equality check with true &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=marcarComoUsado,-methodDesc=(Lbr/ufpe/cin/residencia/loja/descontos/CodigoCupom;)V],-indexes=[12],-mutator=org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_IF]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=marcarComoUsado,-methodDesc=(Lbr/ufpe/cin/residencia/loja/descontos/CodigoCupom;)V],-indexes=[12],-mutator=org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_IF]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoria,-method=marcarComoUsado,-methodDesc=(Lbr/ufpe/cin/residencia/loja/descontos/CodigoCupom;)V],-indexes=[12],-mutator=org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_IF]" style="display:none;">Covered by tests:
+<ul>
+<li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()]</li> <li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</li> 
+</ul>
+</div></div> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>marcarComoUsado<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</span></span> removed conditional - replaced equality check with false &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>marcarComoUsado<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()]</span></span> removed conditional - replaced equality check with true &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>7.<span><b>7</b><br/><b>Location : </b>marcarComoUsado<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()]</span></span> negated conditional &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@38792286_28'>28</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@38792286_28'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>marcarComoUsado<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()]</span></span> removed call to br/ufpe/cin/residencia/loja/descontos/Cupom::marcarComoUsado &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+
+<li class='mutator'>CONDITIONALS_BOUNDARY</li>
+
+<li class='mutator'>CONSTRUCTOR_CALLS</li>
+
+<li class='mutator'>EMPTY_RETURNS</li>
+
+<li class='mutator'>EXPERIMENTAL_ARGUMENT_PROPAGATION</li>
+
+<li class='mutator'>EXPERIMENTAL_BIG_INTEGER</li>
+
+<li class='mutator'>EXPERIMENTAL_MEMBER_VARIABLE</li>
+
+<li class='mutator'>EXPERIMENTAL_NAKED_RECEIVER</li>
+
+<li class='mutator'>EXPERIMENTAL_SWITCH</li>
+
+<li class='mutator'>FALSE_RETURNS</li>
+
+<li class='mutator'>INCREMENTS</li>
+
+<li class='mutator'>INLINE_CONSTS</li>
+
+<li class='mutator'>INVERT_NEGS</li>
+
+<li class='mutator'>MATH</li>
+
+<li class='mutator'>NEGATE_CONDITIONALS</li>
+
+<li class='mutator'>NON_VOID_METHOD_CALLS</li>
+
+<li class='mutator'>NULL_RETURNS</li>
+
+<li class='mutator'>PRIMITIVE_RETURNS</li>
+
+<li class='mutator'>REMOVE_CONDITIONALS_EQUAL_ELSE</li>
+
+<li class='mutator'>REMOVE_CONDITIONALS_EQUAL_IF</li>
+
+<li class='mutator'>REMOVE_CONDITIONALS_ORDER_ELSE</li>
+
+<li class='mutator'>REMOVE_CONDITIONALS_ORDER_IF</li>
+
+<li class='mutator'>REMOVE_INCREMENTS</li>
+
+<li class='mutator'>TRUE_RETURNS</li>
+
+<li class='mutator'>VOID_METHOD_CALLS</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterCupomInexistenteRetornaNull()] (0 ms)</li><li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:obterRetornaCupomExistente()] (0 ms)</li><li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoNaoAfetaCupomNaoUnico()] (0 ms)</li><li>br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.descontos.RepositorioCupomEmMemoriaTest]/[method:marcarComoUsadoSoFuncionaParaUsoUnico()] (0 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='https://pitest.org'>PIT</a> 1.20.3
+
+</body>
+</html>

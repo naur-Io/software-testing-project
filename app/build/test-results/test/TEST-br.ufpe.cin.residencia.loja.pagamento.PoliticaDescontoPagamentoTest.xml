@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="br.ufpe.cin.residencia.loja.pagamento.PoliticaDescontoPagamentoTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-01-31T17:12:11.608Z" hostname="DESKTOP-C0LRCO9" time="0.003">
+<testsuite name="br.ufpe.cin.residencia.loja.pagamento.PoliticaDescontoPagamentoTest" tests="18" skipped="0" failures="0" errors="0" timestamp="2026-01-31T20:14:52.504Z" hostname="DESKTOP-C0LRCO9" time="0.008">
   <properties/>
   <testcase name="boletoSemCupomDaDoisPorcento()" classname="br.ufpe.cin.residencia.loja.pagamento.PoliticaDescontoPagamentoTest" time="0.0"/>
-  <testcase name="boletoComCupomDesconto5NaoDaDescontoPagamento()" classname="br.ufpe.cin.residencia.loja.pagamento.PoliticaDescontoPagamentoTest" time="0.0"/>
-  <testcase name="pixComCupomPorcento10NaoDaDescontoPagamento()" classname="br.ufpe.cin.residencia.loja.pagamento.PoliticaDescontoPagamentoTest" time="0.0"/>
+  <testcase name="deveDarDesconto2PorCentoSeBoletoSemCupomBloqueador()" classname="br.ufpe.cin.residencia.loja.pagamento.PoliticaDescontoPagamentoTest" time="0.0"/>
+  <testcase name="boletoComCupomDesconto5NaoDaDescontoPagamento()" classname="br.ufpe.cin.residencia.loja.pagamento.PoliticaDescontoPagamentoTest" time="0.001"/>
+  <testcase name="descontoZeroSePixComCupomPorcento20VIP()" classname="br.ufpe.cin.residencia.loja.pagamento.PoliticaDescontoPagamentoTest" time="0.0"/>
+  <testcase name="deveRetornarZeroSePixComCupomPorcento20VIP()" classname="br.ufpe.cin.residencia.loja.pagamento.PoliticaDescontoPagamentoTest" time="0.001"/>
+  <testcase name="deveDarDesconto5PorCentoSePixSemCupomBloqueador()" classname="br.ufpe.cin.residencia.loja.pagamento.PoliticaDescontoPagamentoTest" time="0.0"/>
+  <testcase name="descontoZeroSeCartao()" classname="br.ufpe.cin.residencia.loja.pagamento.PoliticaDescontoPagamentoTest" time="0.0"/>
+  <testcase name="deveCobrirReturnFinal()" classname="br.ufpe.cin.residencia.loja.pagamento.PoliticaDescontoPagamentoTest" time="0.0"/>
+  <testcase name="descontoZeroSeBoletoComCupomDesconto5()" classname="br.ufpe.cin.residencia.loja.pagamento.PoliticaDescontoPagamentoTest" time="0.0"/>
+  <testcase name="pixComCupomPorcento10NaoDaDescontoPagamento()" classname="br.ufpe.cin.residencia.loja.pagamento.PoliticaDescontoPagamentoTest" time="0.001"/>
+  <testcase name="deveRetornarZeroSeBoletoComCupomDesconto5()" classname="br.ufpe.cin.residencia.loja.pagamento.PoliticaDescontoPagamentoTest" time="0.0"/>
   <testcase name="pixSemCupomDaCincoPorcento()" classname="br.ufpe.cin.residencia.loja.pagamento.PoliticaDescontoPagamentoTest" time="0.0"/>
   <testcase name="baseNegativaNuncaDaDesconto()" classname="br.ufpe.cin.residencia.loja.pagamento.PoliticaDescontoPagamentoTest" time="0.0"/>
-  <testcase name="pixComCupomPorcento20VipNaoDaDescontoPagamento()" classname="br.ufpe.cin.residencia.loja.pagamento.PoliticaDescontoPagamentoTest" time="0.001"/>
+  <testcase name="pixComCupomPorcento20VipNaoDaDescontoPagamento()" classname="br.ufpe.cin.residencia.loja.pagamento.PoliticaDescontoPagamentoTest" time="0.0"/>
+  <testcase name="deveRetornarZeroSePixComCupomPorcento10()" classname="br.ufpe.cin.residencia.loja.pagamento.PoliticaDescontoPagamentoTest" time="0.0"/>
+  <testcase name="deveRetornarZeroSeCartao()" classname="br.ufpe.cin.residencia.loja.pagamento.PoliticaDescontoPagamentoTest" time="0.0"/>
   <testcase name="cartaoNuncaDaDesconto()" classname="br.ufpe.cin.residencia.loja.pagamento.PoliticaDescontoPagamentoTest" time="0.0"/>
+  <testcase name="deveRetornarZeroSeBaseNegativa()" classname="br.ufpe.cin.residencia.loja.pagamento.PoliticaDescontoPagamentoTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

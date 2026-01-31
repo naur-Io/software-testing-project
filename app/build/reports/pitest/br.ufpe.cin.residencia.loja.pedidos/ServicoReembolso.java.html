@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>ServicoReembolso.java</h1>
+
+<table class="src">
+
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3c69362a_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package br.ufpe.cin.residencia.loja.pedidos;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3c69362a_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3c69362a_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import br.ufpe.cin.residencia.loja.catalogo.Catalogo;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3c69362a_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import br.ufpe.cin.residencia.loja.persistencia.RepositorioPedidos;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3c69362a_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3c69362a_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.time.LocalDateTime;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3c69362a_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3c69362a_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>public class ServicoReembolso {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3c69362a_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private final RepositorioPedidos repositorioPedidos;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3c69362a_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private final Catalogo catalogo;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3c69362a_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3c69362a_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    public ServicoReembolso(RepositorioPedidos repositorioPedidos, Catalogo catalogo) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3c69362a_13'/>
+13
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_13'>6</a>
+<span>
+
+1. &#60;init&#62; : negated conditional &rarr; KILLED<br/>
+
+2. &#60;init&#62; : negated conditional &rarr; KILLED<br/>
+
+3. &#60;init&#62; : removed conditional - replaced equality check with true &rarr; KILLED<br/>
+
+4. &#60;init&#62; : removed conditional - replaced equality check with false &rarr; KILLED<br/>
+
+5. &#60;init&#62; : removed conditional - replaced equality check with true &rarr; KILLED<br/>
+
+6. &#60;init&#62; : removed conditional - replaced equality check with false &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (repositorioPedidos == null || catalogo == null) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3c69362a_14'/>
+14
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_14'>1</a>
+<span>
+
+1. &#60;init&#62; : removed call to java/lang/IllegalArgumentException::&#60;init&#62; &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            throw new IllegalArgumentException(&#34;Reposit&#243;rio de pedidos e cat&#225;logo s&#227;o obrigat&#243;rios.&#34;);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3c69362a_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3c69362a_16'/>
+16
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_16'>1</a>
+<span>
+
+1. &#60;init&#62; : Removed assignment to member variable repositorioPedidos &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        this.repositorioPedidos = repositorioPedidos;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3c69362a_17'/>
+17
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_17'>1</a>
+<span>
+
+1. &#60;init&#62; : Removed assignment to member variable catalogo &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        this.catalogo = catalogo;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3c69362a_18'/>
+18
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_18'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3c69362a_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_19'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3c69362a_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_20'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public Pedido reembolsar(String idPedido) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3c69362a_21'/>
+21
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_21'>1</a>
+<span>
+
+1. reembolsar : removed call to br/ufpe/cin/residencia/loja/persistencia/RepositorioPedidos::obterPorId &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        Pedido pedido = repositorioPedidos.obterPorId(idPedido);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3c69362a_22'/>
+22
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_22'>4</a>
+<span>
+
+1. reembolsar : removed conditional - replaced equality check with false &rarr; SURVIVED<br/>
+
+2. reembolsar : removed call to br/ufpe/cin/residencia/loja/pedidos/Pedido::getStatus &rarr; SURVIVED<br/>
+
+3. reembolsar : negated conditional &rarr; KILLED<br/>
+
+4. reembolsar : removed conditional - replaced equality check with true &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        if (pedido.getStatus() == StatusPedido.REEMBOLSADO) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3c69362a_23'/>
+23
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_23'>1</a>
+<span>
+
+1. reembolsar : removed call to br/ufpe/cin/residencia/loja/pedidos/ExcecaoPedidoJaReembolsado::&#60;init&#62; &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            throw new ExcecaoPedidoJaReembolsado(&#34;Pedido j&#225; reembolsado: &#34; + idPedido);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3c69362a_24'/>
+24
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_24'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3c69362a_25'/>
+25
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_25'>1</a>
+<span>
+
+1. reembolsar : removed call to br/ufpe/cin/residencia/loja/pedidos/Pedido::getItens &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        for (ItemPedido item : pedido.getItens()) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3c69362a_26'/>
+26
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_26'>3</a>
+<span>
+
+1. reembolsar : removed call to br/ufpe/cin/residencia/loja/pedidos/ItemPedido::getSku &rarr; KILLED<br/>
+
+2. reembolsar : removed call to br/ufpe/cin/residencia/loja/catalogo/Catalogo::reporEstoque &rarr; KILLED<br/>
+
+3. reembolsar : removed call to br/ufpe/cin/residencia/loja/pedidos/ItemPedido::getQuantidade &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            catalogo.reporEstoque(item.getSku(), item.getQuantidade());</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3c69362a_27'/>
+27
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_27'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3c69362a_28'/>
+28
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_28'>2</a>
+<span>
+
+1. reembolsar : removed call to br/ufpe/cin/residencia/loja/pedidos/Pedido::marcarReembolsado &rarr; KILLED<br/>
+
+2. reembolsar : removed call to java/time/LocalDateTime::now &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        pedido.marcarReembolsado(LocalDateTime.now());</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3c69362a_29'/>
+29
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_29'>1</a>
+<span>
+
+1. reembolsar : removed call to br/ufpe/cin/residencia/loja/persistencia/RepositorioPedidos::atualizar &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        repositorioPedidos.atualizar(pedido);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3c69362a_30'/>
+30
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_30'>1</a>
+<span>
+
+1. reembolsar : replaced return value with null for br/ufpe/cin/residencia/loja/pedidos/ServicoReembolso::reembolsar &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return pedido;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3c69362a_31'/>
+31
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_31'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@3c69362a_32'/>
+32
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_32'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3c69362a_13'>13</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_13'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest]/[method:construtorNaoAceitaDependenciasNulas()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest]/[method:construtorNaoAceitaDependenciasNulas()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest]/[method:reembolsarPedidoJaReembolsadoLancaExcecao()]</span></span> removed conditional - replaced equality check with true &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest]/[method:construtorNaoAceitaDependenciasNulas()]</span></span> removed conditional - replaced equality check with false &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest]/[method:construtorNaoAceitaDependenciasNulas()]</span></span> removed conditional - replaced equality check with true &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest]/[method:reembolsarPedidoJaReembolsadoLancaExcecao()]</span></span> removed conditional - replaced equality check with false &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3c69362a_14'>14</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_14'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest]/[method:construtorNaoAceitaDependenciasNulas()]</span></span> removed call to java/lang/IllegalArgumentException::&#60;init&#62; &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3c69362a_16'>16</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_16'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest]/[method:reembolsarPedidoJaReembolsadoLancaExcecao()]</span></span> Removed assignment to member variable repositorioPedidos &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3c69362a_17'>17</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_17'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest]/[method:reembolsarPedidoPagoReporEstoqueAtualizaPedido()]</span></span> Removed assignment to member variable catalogo &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3c69362a_21'>21</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_21'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>reembolsar<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest]/[method:reembolsarPedidoJaReembolsadoLancaExcecao()]</span></span> removed call to br/ufpe/cin/residencia/loja/persistencia/RepositorioPedidos::obterPorId &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3c69362a_22'>22</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_22'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>reembolsar<br/><b>Killed by : </b>none</span></span> removed conditional - replaced equality check with false &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.pedidos.ServicoReembolso,-method=reembolsar,-methodDesc=(Ljava/lang/String;)Lbr/ufpe/cin/residencia/loja/pedidos/Pedido;],-indexes=[13],-mutator=org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.pedidos.ServicoReembolso,-method=reembolsar,-methodDesc=(Ljava/lang/String;)Lbr/ufpe/cin/residencia/loja/pedidos/Pedido;],-indexes=[13],-mutator=org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.pedidos.ServicoReembolso,-method=reembolsar,-methodDesc=(Ljava/lang/String;)Lbr/ufpe/cin/residencia/loja/pedidos/Pedido;],-indexes=[13],-mutator=org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE]" style="display:none;">Covered by tests:
+<ul>
+<li>br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest]/[method:reembolsarPedidoJaReembolsadoLancaExcecao()]</li> <li>br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest]/[method:reembolsarPedidoPagoReporEstoqueAtualizaPedido()]</li> 
+</ul>
+</div></div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>reembolsar<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest]/[method:reembolsarPedidoPagoReporEstoqueAtualizaPedido()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>reembolsar<br/><b>Killed by : </b>none</span></span> removed call to br/ufpe/cin/residencia/loja/pedidos/Pedido::getStatus &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.pedidos.ServicoReembolso,-method=reembolsar,-methodDesc=(Ljava/lang/String;)Lbr/ufpe/cin/residencia/loja/pedidos/Pedido;],-indexes=[11],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.pedidos.ServicoReembolso,-method=reembolsar,-methodDesc=(Ljava/lang/String;)Lbr/ufpe/cin/residencia/loja/pedidos/Pedido;],-indexes=[11],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.pedidos.ServicoReembolso,-method=reembolsar,-methodDesc=(Ljava/lang/String;)Lbr/ufpe/cin/residencia/loja/pedidos/Pedido;],-indexes=[11],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NonVoidMethodCallMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest]/[method:reembolsarPedidoJaReembolsadoLancaExcecao()]</li> <li>br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest]/[method:reembolsarPedidoPagoReporEstoqueAtualizaPedido()]</li> 
+</ul>
+</div></div> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>reembolsar<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest]/[method:reembolsarPedidoPagoReporEstoqueAtualizaPedido()]</span></span> removed conditional - replaced equality check with true &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3c69362a_23'>23</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_23'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>reembolsar<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest]/[method:reembolsarPedidoJaReembolsadoLancaExcecao()]</span></span> removed call to br/ufpe/cin/residencia/loja/pedidos/ExcecaoPedidoJaReembolsado::&#60;init&#62; &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3c69362a_25'>25</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_25'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>reembolsar<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest]/[method:reembolsarPedidoPagoReporEstoqueAtualizaPedido()]</span></span> removed call to br/ufpe/cin/residencia/loja/pedidos/Pedido::getItens &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3c69362a_26'>26</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_26'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>reembolsar<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest]/[method:reembolsarPedidoPagoReporEstoqueAtualizaPedido()]</span></span> removed call to br/ufpe/cin/residencia/loja/pedidos/ItemPedido::getSku &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>reembolsar<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest]/[method:reembolsarPedidoPagoReporEstoqueAtualizaPedido()]</span></span> removed call to br/ufpe/cin/residencia/loja/catalogo/Catalogo::reporEstoque &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>reembolsar<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest]/[method:reembolsarPedidoPagoReporEstoqueAtualizaPedido()]</span></span> removed call to br/ufpe/cin/residencia/loja/pedidos/ItemPedido::getQuantidade &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3c69362a_28'>28</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_28'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>reembolsar<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest]/[method:reembolsarPedidoPagoReporEstoqueAtualizaPedido()]</span></span> removed call to br/ufpe/cin/residencia/loja/pedidos/Pedido::marcarReembolsado &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>reembolsar<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest]/[method:reembolsarPedidoPagoReporEstoqueAtualizaPedido()]</span></span> removed call to java/time/LocalDateTime::now &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3c69362a_29'>29</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_29'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>reembolsar<br/><b>Killed by : </b>none</span></span> removed call to br/ufpe/cin/residencia/loja/persistencia/RepositorioPedidos::atualizar &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.pedidos.ServicoReembolso,-method=reembolsar,-methodDesc=(Ljava/lang/String;)Lbr/ufpe/cin/residencia/loja/pedidos/Pedido;],-indexes=[61],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.pedidos.ServicoReembolso,-method=reembolsar,-methodDesc=(Ljava/lang/String;)Lbr/ufpe/cin/residencia/loja/pedidos/Pedido;],-indexes=[61],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.ufpe.cin.residencia.loja.pedidos.ServicoReembolso,-method=reembolsar,-methodDesc=(Ljava/lang/String;)Lbr/ufpe/cin/residencia/loja/pedidos/Pedido;],-indexes=[61],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest]/[method:reembolsarPedidoPagoReporEstoqueAtualizaPedido()]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@3c69362a_30'>30</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@3c69362a_30'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>reembolsar<br/><b>Killed by : </b>br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest]/[method:reembolsarPedidoPagoReporEstoqueAtualizaPedido()]</span></span> replaced return value with null for br/ufpe/cin/residencia/loja/pedidos/ServicoReembolso::reembolsar &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+
+<li class='mutator'>CONDITIONALS_BOUNDARY</li>
+
+<li class='mutator'>CONSTRUCTOR_CALLS</li>
+
+<li class='mutator'>EMPTY_RETURNS</li>
+
+<li class='mutator'>EXPERIMENTAL_ARGUMENT_PROPAGATION</li>
+
+<li class='mutator'>EXPERIMENTAL_BIG_INTEGER</li>
+
+<li class='mutator'>EXPERIMENTAL_MEMBER_VARIABLE</li>
+
+<li class='mutator'>EXPERIMENTAL_NAKED_RECEIVER</li>
+
+<li class='mutator'>EXPERIMENTAL_SWITCH</li>
+
+<li class='mutator'>FALSE_RETURNS</li>
+
+<li class='mutator'>INCREMENTS</li>
+
+<li class='mutator'>INLINE_CONSTS</li>
+
+<li class='mutator'>INVERT_NEGS</li>
+
+<li class='mutator'>MATH</li>
+
+<li class='mutator'>NEGATE_CONDITIONALS</li>
+
+<li class='mutator'>NON_VOID_METHOD_CALLS</li>
+
+<li class='mutator'>NULL_RETURNS</li>
+
+<li class='mutator'>PRIMITIVE_RETURNS</li>
+
+<li class='mutator'>REMOVE_CONDITIONALS_EQUAL_ELSE</li>
+
+<li class='mutator'>REMOVE_CONDITIONALS_EQUAL_IF</li>
+
+<li class='mutator'>REMOVE_CONDITIONALS_ORDER_ELSE</li>
+
+<li class='mutator'>REMOVE_CONDITIONALS_ORDER_IF</li>
+
+<li class='mutator'>REMOVE_INCREMENTS</li>
+
+<li class='mutator'>TRUE_RETURNS</li>
+
+<li class='mutator'>VOID_METHOD_CALLS</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest]/[method:reembolsarPedidoPagoReporEstoqueAtualizaPedido()] (0 ms)</li><li>br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest]/[method:construtorNaoAceitaDependenciasNulas()] (1 ms)</li><li>br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest.[engine:junit-jupiter]/[class:br.ufpe.cin.residencia.loja.pedidos.ServicoReembolsoTest]/[method:reembolsarPedidoJaReembolsadoLancaExcecao()] (0 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='https://pitest.org'>PIT</a> 1.20.3
+
+</body>
+</html>

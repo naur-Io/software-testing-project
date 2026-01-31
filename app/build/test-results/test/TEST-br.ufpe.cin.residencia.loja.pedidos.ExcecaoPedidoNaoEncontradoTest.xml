@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="br.ufpe.cin.residencia.loja.pedidos.ExcecaoPedidoNaoEncontradoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-01-31T17:12:11.613Z" hostname="DESKTOP-C0LRCO9" time="0.001">
+<testsuite name="br.ufpe.cin.residencia.loja.pedidos.ExcecaoPedidoNaoEncontradoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-01-31T20:14:52.514Z" hostname="DESKTOP-C0LRCO9" time="0.0">
   <properties/>
-  <testcase name="construtorDefineMensagemCorretamente()" classname="br.ufpe.cin.residencia.loja.pedidos.ExcecaoPedidoNaoEncontradoTest" time="0.001"/>
+  <testcase name="construtorDefineMensagemCorretamente()" classname="br.ufpe.cin.residencia.loja.pedidos.ExcecaoPedidoNaoEncontradoTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

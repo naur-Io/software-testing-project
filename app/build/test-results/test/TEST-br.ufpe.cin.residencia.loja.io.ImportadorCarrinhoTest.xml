@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="br.ufpe.cin.residencia.loja.io.ImportadorCarrinhoTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-01-31T17:12:11.561Z" hostname="DESKTOP-C0LRCO9" time="0.045">
+<testsuite name="br.ufpe.cin.residencia.loja.io.ImportadorCarrinhoTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-01-31T20:14:52.457Z" hostname="DESKTOP-C0LRCO9" time="0.045">
   <properties/>
-  <testcase name="linhaInvalidaSemSeparadorLancaExcecao()" classname="br.ufpe.cin.residencia.loja.io.ImportadorCarrinhoTest" time="0.006"/>
-  <testcase name="skuInexistenteNoCatalogoLancaExcecao()" classname="br.ufpe.cin.residencia.loja.io.ImportadorCarrinhoTest" time="0.005"/>
-  <testcase name="arquivoApenasComCabecalhoLancaExcecao()" classname="br.ufpe.cin.residencia.loja.io.ImportadorCarrinhoTest" time="0.005"/>
-  <testcase name="somaQuantidadesDeSkusRepetidos()" classname="br.ufpe.cin.residencia.loja.io.ImportadorCarrinhoTest" time="0.004"/>
+  <testcase name="linhaInvalidaSemSeparadorLancaExcecao()" classname="br.ufpe.cin.residencia.loja.io.ImportadorCarrinhoTest" time="0.005"/>
+  <testcase name="skuInexistenteNoCatalogoLancaExcecao()" classname="br.ufpe.cin.residencia.loja.io.ImportadorCarrinhoTest" time="0.004"/>
+  <testcase name="arquivoApenasComCabecalhoLancaExcecao()" classname="br.ufpe.cin.residencia.loja.io.ImportadorCarrinhoTest" time="0.004"/>
+  <testcase name="somaQuantidadesDeSkusRepetidos()" classname="br.ufpe.cin.residencia.loja.io.ImportadorCarrinhoTest" time="0.005"/>
   <testcase name="catalogoNuloLancaExcecao()" classname="br.ufpe.cin.residencia.loja.io.ImportadorCarrinhoTest" time="0.002"/>
-  <testcase name="quantidadeNaoNumericaLancaExcecao()" classname="br.ufpe.cin.residencia.loja.io.ImportadorCarrinhoTest" time="0.004"/>
+  <testcase name="quantidadeNaoNumericaLancaExcecao()" classname="br.ufpe.cin.residencia.loja.io.ImportadorCarrinhoTest" time="0.005"/>
   <testcase name="quantidadeZeroOuNegativaLancaExcecao()" classname="br.ufpe.cin.residencia.loja.io.ImportadorCarrinhoTest" time="0.004"/>
-  <testcase name="arquivoInexistenteLancaExcecao()" classname="br.ufpe.cin.residencia.loja.io.ImportadorCarrinhoTest" time="0.003"/>
+  <testcase name="arquivoInexistenteLancaExcecao()" classname="br.ufpe.cin.residencia.loja.io.ImportadorCarrinhoTest" time="0.002"/>
   <testcase name="arquivoNuloLancaExcecao()" classname="br.ufpe.cin.residencia.loja.io.ImportadorCarrinhoTest" time="0.002"/>
-  <testcase name="importaCarrinhoComSucesso()" classname="br.ufpe.cin.residencia.loja.io.ImportadorCarrinhoTest" time="0.004"/>
+  <testcase name="importaCarrinhoComSucesso()" classname="br.ufpe.cin.residencia.loja.io.ImportadorCarrinhoTest" time="0.005"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

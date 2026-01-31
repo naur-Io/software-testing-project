@@ -29,178 +29,178 @@ public class RepositorioPedidosArquivoCSV implements RepositorioPedidos {
     private static final String SEPARADOR_ITEM_CAMPO = &quot;,&quot;;
 
     private final Path arquivo;
-<span class="nc" id="L32">    private final Map&lt;String, Pedido&gt; pedidos = new LinkedHashMap&lt;&gt;();</span>
+<span class="fc" id="L32">    private final Map&lt;String, Pedido&gt; pedidos = new LinkedHashMap&lt;&gt;();</span>
 
     public RepositorioPedidosArquivoCSV() {
-<span class="nc" id="L35">        this(Path.of(&quot;dados&quot;, &quot;pedidos.csv&quot;));</span>
-<span class="nc" id="L36">    }</span>
+<span class="fc" id="L35">        this(Path.of(&quot;dados&quot;, &quot;pedidos.csv&quot;));</span>
+<span class="fc" id="L36">    }</span>
 
-<span class="nc" id="L38">    public RepositorioPedidosArquivoCSV(Path arquivo) {</span>
-<span class="nc" id="L39">        this.arquivo = arquivo;</span>
-<span class="nc" id="L40">        carregar();</span>
-<span class="nc" id="L41">    }</span>
+<span class="fc" id="L38">    public RepositorioPedidosArquivoCSV(Path arquivo) {</span>
+<span class="fc" id="L39">        this.arquivo = arquivo;</span>
+<span class="fc" id="L40">        carregar();</span>
+<span class="fc" id="L41">    }</span>
 
     @Override
     public void salvar(Pedido pedido) {
-<span class="nc bnc" id="L45" title="All 2 branches missed.">        if (pedido == null) {</span>
-<span class="nc" id="L46">            throw new IllegalArgumentException(&quot;Pedido não pode ser nulo.&quot;);</span>
+<span class="fc bfc" id="L45" title="All 2 branches covered.">        if (pedido == null) {</span>
+<span class="fc" id="L46">            throw new IllegalArgumentException(&quot;Pedido não pode ser nulo.&quot;);</span>
         }
-<span class="nc" id="L48">        pedidos.put(pedido.getId(), pedido);</span>
-<span class="nc" id="L49">        persistir();</span>
-<span class="nc" id="L50">    }</span>
+<span class="fc" id="L48">        pedidos.put(pedido.getId(), pedido);</span>
+<span class="fc" id="L49">        persistir();</span>
+<span class="fc" id="L50">    }</span>
 
     @Override
     public Pedido obterPorId(String id) {
-<span class="nc" id="L54">        Pedido pedido = pedidos.get(id);</span>
-<span class="nc bnc" id="L55" title="All 2 branches missed.">        if (pedido == null) {</span>
-<span class="nc" id="L56">            throw new ExcecaoPedidoNaoEncontrado(&quot;Pedido não encontrado: &quot; + id);</span>
+<span class="fc" id="L54">        Pedido pedido = pedidos.get(id);</span>
+<span class="fc bfc" id="L55" title="All 2 branches covered.">        if (pedido == null) {</span>
+<span class="fc" id="L56">            throw new ExcecaoPedidoNaoEncontrado(&quot;Pedido não encontrado: &quot; + id);</span>
         }
-<span class="nc" id="L58">        return pedido;</span>
+<span class="fc" id="L58">        return pedido;</span>
     }
 
     @Override
     public List&lt;Pedido&gt; listarTodos() {
-<span class="nc" id="L63">        return pedidos.values().stream()</span>
-<span class="nc" id="L64">                .sorted(Comparator.comparing(Pedido::getCriadoEm).reversed())</span>
-<span class="nc" id="L65">                .collect(Collectors.toList());</span>
+<span class="fc" id="L63">        return pedidos.values().stream()</span>
+<span class="fc" id="L64">                .sorted(Comparator.comparing(Pedido::getCriadoEm).reversed())</span>
+<span class="fc" id="L65">                .collect(Collectors.toList());</span>
     }
 
     @Override
     public void atualizar(Pedido pedido) {
-<span class="nc" id="L70">        salvar(pedido);</span>
-<span class="nc" id="L71">    }</span>
+<span class="fc" id="L70">        salvar(pedido);</span>
+<span class="fc" id="L71">    }</span>
 
     private void carregar() {
-<span class="nc" id="L74">        pedidos.clear();</span>
-<span class="nc bnc" id="L75" title="All 2 branches missed.">        if (Files.notExists(arquivo)) {</span>
-<span class="nc" id="L76">            criarArquivoVazio();</span>
-<span class="nc" id="L77">            return;</span>
+<span class="fc" id="L74">        pedidos.clear();</span>
+<span class="fc bfc" id="L75" title="All 2 branches covered.">        if (Files.notExists(arquivo)) {</span>
+<span class="fc" id="L76">            criarArquivoVazio();</span>
+<span class="fc" id="L77">            return;</span>
         }
         List&lt;String&gt; linhas;
         try {
-<span class="nc" id="L81">            linhas = Files.readAllLines(arquivo);</span>
-<span class="nc" id="L82">        } catch (IOException e) {</span>
-<span class="nc" id="L83">            throw new ExcecaoPersistenciaPedidos(&quot;Falha ao ler pedidos: &quot; + arquivo, e);</span>
-<span class="nc" id="L84">        }</span>
-<span class="nc bnc" id="L85" title="All 2 branches missed.">        for (String linha : linhas) {</span>
-<span class="nc" id="L86">            String limpa = linha.trim();</span>
-<span class="nc bnc" id="L87" title="All 4 branches missed.">            if (limpa.isEmpty() || limpa.equalsIgnoreCase(CABECALHO)) {</span>
-<span class="nc" id="L88">                continue;</span>
+<span class="fc" id="L81">            linhas = Files.readAllLines(arquivo);</span>
+<span class="fc" id="L82">        } catch (IOException e) {</span>
+<span class="fc" id="L83">            throw new ExcecaoPersistenciaPedidos(&quot;Falha ao ler pedidos: &quot; + arquivo, e);</span>
+<span class="fc" id="L84">        }</span>
+<span class="fc bfc" id="L85" title="All 2 branches covered.">        for (String linha : linhas) {</span>
+<span class="fc" id="L86">            String limpa = linha.trim();</span>
+<span class="fc bfc" id="L87" title="All 4 branches covered.">            if (limpa.isEmpty() || limpa.equalsIgnoreCase(CABECALHO)) {</span>
+<span class="fc" id="L88">                continue;</span>
             }
-<span class="nc" id="L90">            Pedido pedido = parsePedido(limpa);</span>
-<span class="nc" id="L91">            pedidos.put(pedido.getId(), pedido);</span>
-<span class="nc" id="L92">        }</span>
-<span class="nc" id="L93">    }</span>
+<span class="fc" id="L90">            Pedido pedido = parsePedido(limpa);</span>
+<span class="fc" id="L91">            pedidos.put(pedido.getId(), pedido);</span>
+<span class="fc" id="L92">        }</span>
+<span class="fc" id="L93">    }</span>
 
     private void criarArquivoVazio() {
         try {
-<span class="nc" id="L97">            Path parent = arquivo.getParent();</span>
-<span class="nc bnc" id="L98" title="All 2 branches missed.">            if (parent != null) {</span>
-<span class="nc" id="L99">                Files.createDirectories(parent);</span>
+<span class="fc" id="L97">            Path parent = arquivo.getParent();</span>
+<span class="pc bpc" id="L98" title="1 of 2 branches missed.">            if (parent != null) {</span>
+<span class="fc" id="L99">                Files.createDirectories(parent);</span>
             }
-<span class="nc" id="L101">            Files.writeString(arquivo, CABECALHO + System.lineSeparator());</span>
+<span class="fc" id="L101">            Files.writeString(arquivo, CABECALHO + System.lineSeparator());</span>
 <span class="nc" id="L102">        } catch (IOException e) {</span>
 <span class="nc" id="L103">            throw new ExcecaoPersistenciaPedidos(&quot;Falha ao criar arquivo de pedidos: &quot; + arquivo, e);</span>
-<span class="nc" id="L104">        }</span>
-<span class="nc" id="L105">    }</span>
+<span class="fc" id="L104">        }</span>
+<span class="fc" id="L105">    }</span>
 
     private void persistir() {
-<span class="nc" id="L108">        StringBuilder conteudo = new StringBuilder();</span>
-<span class="nc" id="L109">        conteudo.append(CABECALHO).append(System.lineSeparator());</span>
-<span class="nc bnc" id="L110" title="All 2 branches missed.">        for (Pedido pedido : listarTodos()) {</span>
-<span class="nc" id="L111">            conteudo.append(serializarPedido(pedido)).append(System.lineSeparator());</span>
-<span class="nc" id="L112">        }</span>
+<span class="fc" id="L108">        StringBuilder conteudo = new StringBuilder();</span>
+<span class="fc" id="L109">        conteudo.append(CABECALHO).append(System.lineSeparator());</span>
+<span class="fc bfc" id="L110" title="All 2 branches covered.">        for (Pedido pedido : listarTodos()) {</span>
+<span class="fc" id="L111">            conteudo.append(serializarPedido(pedido)).append(System.lineSeparator());</span>
+<span class="fc" id="L112">        }</span>
         try {
-<span class="nc" id="L114">            Path parent = arquivo.getParent();</span>
-<span class="nc bnc" id="L115" title="All 2 branches missed.">            if (parent != null) {</span>
-<span class="nc" id="L116">                Files.createDirectories(parent);</span>
+<span class="fc" id="L114">            Path parent = arquivo.getParent();</span>
+<span class="pc bpc" id="L115" title="1 of 2 branches missed.">            if (parent != null) {</span>
+<span class="fc" id="L116">                Files.createDirectories(parent);</span>
             }
-<span class="nc" id="L118">            Files.writeString(arquivo, conteudo.toString());</span>
-<span class="nc" id="L119">        } catch (IOException e) {</span>
-<span class="nc" id="L120">            throw new ExcecaoPersistenciaPedidos(&quot;Falha ao salvar pedidos: &quot; + arquivo, e);</span>
-<span class="nc" id="L121">        }</span>
-<span class="nc" id="L122">    }</span>
+<span class="fc" id="L118">            Files.writeString(arquivo, conteudo.toString());</span>
+<span class="fc" id="L119">        } catch (IOException e) {</span>
+<span class="fc" id="L120">            throw new ExcecaoPersistenciaPedidos(&quot;Falha ao salvar pedidos: &quot; + arquivo, e);</span>
+<span class="fc" id="L121">        }</span>
+<span class="fc" id="L122">    }</span>
 
     private Pedido parsePedido(String linha) {
-<span class="nc" id="L125">        String[] partes = linha.split(SEPARADOR_CAMPO, -1);</span>
-<span class="nc bnc" id="L126" title="All 2 branches missed.">        if (partes.length != 14) {</span>
-<span class="nc" id="L127">            throw new ExcecaoPersistenciaPedidos(&quot;Linha inválida em pedidos: &quot; + linha);</span>
+<span class="fc" id="L125">        String[] partes = linha.split(SEPARADOR_CAMPO, -1);</span>
+<span class="fc bfc" id="L126" title="All 2 branches covered.">        if (partes.length != 14) {</span>
+<span class="fc" id="L127">            throw new ExcecaoPersistenciaPedidos(&quot;Linha inválida em pedidos: &quot; + linha);</span>
         }
         try {
-<span class="nc" id="L130">            String id = partes[0].trim();</span>
-<span class="nc" id="L131">            LocalDateTime criadoEm = LocalDateTime.parse(partes[1].trim());</span>
-<span class="nc" id="L132">            String reembolsadoEmTexto = partes[2].trim();</span>
-<span class="nc bnc" id="L133" title="All 2 branches missed.">            LocalDateTime reembolsadoEm = reembolsadoEmTexto.isBlank() ? null : LocalDateTime.parse(reembolsadoEmTexto);</span>
-<span class="nc" id="L134">            StatusPedido status = StatusPedido.valueOf(partes[3].trim());</span>
-<span class="nc" id="L135">            MetodoFrete metodoFrete = MetodoFrete.valueOf(partes[4].trim());</span>
-<span class="nc" id="L136">            MetodoPagamento metodoPagamento = MetodoPagamento.valueOf(partes[5].trim());</span>
-<span class="nc" id="L137">            String codigoCupomTexto = partes[6].trim();</span>
-<span class="nc bnc" id="L138" title="All 2 branches missed.">            CodigoCupom codigoCupom = codigoCupomTexto.isBlank() ? null : CodigoCupom.valueOf(codigoCupomTexto);</span>
-<span class="nc" id="L139">            Dinheiro subtotal = Dinheiro.of(partes[7].trim());</span>
-<span class="nc" id="L140">            Dinheiro descontoCupom = Dinheiro.of(partes[8].trim());</span>
-<span class="nc" id="L141">            Dinheiro descontoPagamento = Dinheiro.of(partes[9].trim());</span>
-<span class="nc" id="L142">            Dinheiro imposto = Dinheiro.of(partes[10].trim());</span>
-<span class="nc" id="L143">            Dinheiro frete = Dinheiro.of(partes[11].trim());</span>
-<span class="nc" id="L144">            Dinheiro total = Dinheiro.of(partes[12].trim());</span>
-<span class="nc" id="L145">            List&lt;ItemPedido&gt; itens = parseItens(partes[13].trim());</span>
-<span class="nc" id="L146">            return new Pedido(id, criadoEm, reembolsadoEm, itens, metodoFrete, metodoPagamento, codigoCupom,</span>
+<span class="fc" id="L130">            String id = partes[0].trim();</span>
+<span class="fc" id="L131">            LocalDateTime criadoEm = LocalDateTime.parse(partes[1].trim());</span>
+<span class="fc" id="L132">            String reembolsadoEmTexto = partes[2].trim();</span>
+<span class="pc bpc" id="L133" title="1 of 2 branches missed.">            LocalDateTime reembolsadoEm = reembolsadoEmTexto.isBlank() ? null : LocalDateTime.parse(reembolsadoEmTexto);</span>
+<span class="fc" id="L134">            StatusPedido status = StatusPedido.valueOf(partes[3].trim());</span>
+<span class="fc" id="L135">            MetodoFrete metodoFrete = MetodoFrete.valueOf(partes[4].trim());</span>
+<span class="fc" id="L136">            MetodoPagamento metodoPagamento = MetodoPagamento.valueOf(partes[5].trim());</span>
+<span class="fc" id="L137">            String codigoCupomTexto = partes[6].trim();</span>
+<span class="pc bpc" id="L138" title="1 of 2 branches missed.">            CodigoCupom codigoCupom = codigoCupomTexto.isBlank() ? null : CodigoCupom.valueOf(codigoCupomTexto);</span>
+<span class="fc" id="L139">            Dinheiro subtotal = Dinheiro.of(partes[7].trim());</span>
+<span class="fc" id="L140">            Dinheiro descontoCupom = Dinheiro.of(partes[8].trim());</span>
+<span class="fc" id="L141">            Dinheiro descontoPagamento = Dinheiro.of(partes[9].trim());</span>
+<span class="fc" id="L142">            Dinheiro imposto = Dinheiro.of(partes[10].trim());</span>
+<span class="fc" id="L143">            Dinheiro frete = Dinheiro.of(partes[11].trim());</span>
+<span class="fc" id="L144">            Dinheiro total = Dinheiro.of(partes[12].trim());</span>
+<span class="fc" id="L145">            List&lt;ItemPedido&gt; itens = parseItens(partes[13].trim());</span>
+<span class="fc" id="L146">            return new Pedido(id, criadoEm, reembolsadoEm, itens, metodoFrete, metodoPagamento, codigoCupom,</span>
                     subtotal, descontoCupom, descontoPagamento, imposto, frete, total, status);
-<span class="nc" id="L148">        } catch (RuntimeException e) {</span>
-<span class="nc" id="L149">            throw new ExcecaoPersistenciaPedidos(&quot;Erro ao interpretar pedido: &quot; + linha, e);</span>
+<span class="fc" id="L148">        } catch (RuntimeException e) {</span>
+<span class="fc" id="L149">            throw new ExcecaoPersistenciaPedidos(&quot;Erro ao interpretar pedido: &quot; + linha, e);</span>
         }
     }
 
     private List&lt;ItemPedido&gt; parseItens(String texto) {
-<span class="nc bnc" id="L154" title="All 2 branches missed.">        if (texto.isBlank()) {</span>
-<span class="nc" id="L155">            throw new ExcecaoPersistenciaPedidos(&quot;Pedido sem itens não é válido.&quot;);</span>
+<span class="fc bfc" id="L154" title="All 2 branches covered.">        if (texto.isBlank()) {</span>
+<span class="fc" id="L155">            throw new ExcecaoPersistenciaPedidos(&quot;Pedido sem itens não é válido.&quot;);</span>
         }
-<span class="nc" id="L157">        List&lt;ItemPedido&gt; itens = new ArrayList&lt;&gt;();</span>
-<span class="nc" id="L158">        String[] itensTexto = texto.split(SEPARADOR_ITENS);</span>
-<span class="nc bnc" id="L159" title="All 2 branches missed.">        for (String itemTexto : itensTexto) {</span>
-<span class="nc" id="L160">            String[] campos = itemTexto.split(SEPARADOR_ITEM_CAMPO, -1);</span>
-<span class="nc bnc" id="L161" title="All 2 branches missed.">            if (campos.length != 5) {</span>
-<span class="nc" id="L162">                throw new ExcecaoPersistenciaPedidos(&quot;Item inválido em pedido: &quot; + itemTexto);</span>
+<span class="fc" id="L157">        List&lt;ItemPedido&gt; itens = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L158">        String[] itensTexto = texto.split(SEPARADOR_ITENS);</span>
+<span class="fc bfc" id="L159" title="All 2 branches covered.">        for (String itemTexto : itensTexto) {</span>
+<span class="fc" id="L160">            String[] campos = itemTexto.split(SEPARADOR_ITEM_CAMPO, -1);</span>
+<span class="fc bfc" id="L161" title="All 2 branches covered.">            if (campos.length != 5) {</span>
+<span class="fc" id="L162">                throw new ExcecaoPersistenciaPedidos(&quot;Item inválido em pedido: &quot; + itemTexto);</span>
             }
-<span class="nc" id="L164">            String sku = campos[0].trim();</span>
-<span class="nc" id="L165">            String nome = campos[1].trim();</span>
-<span class="nc" id="L166">            Dinheiro preco = Dinheiro.of(campos[2].trim());</span>
-<span class="nc" id="L167">            int peso = Integer.parseInt(campos[3].trim());</span>
-<span class="nc" id="L168">            int quantidade = Integer.parseInt(campos[4].trim());</span>
-<span class="nc" id="L169">            itens.add(new ItemPedido(sku, nome, preco, peso, quantidade));</span>
+<span class="fc" id="L164">            String sku = campos[0].trim();</span>
+<span class="fc" id="L165">            String nome = campos[1].trim();</span>
+<span class="fc" id="L166">            Dinheiro preco = Dinheiro.of(campos[2].trim());</span>
+<span class="fc" id="L167">            int peso = Integer.parseInt(campos[3].trim());</span>
+<span class="fc" id="L168">            int quantidade = Integer.parseInt(campos[4].trim());</span>
+<span class="fc" id="L169">            itens.add(new ItemPedido(sku, nome, preco, peso, quantidade));</span>
         }
-<span class="nc" id="L171">        return itens;</span>
+<span class="fc" id="L171">        return itens;</span>
     }
 
     private String serializarPedido(Pedido pedido) {
-<span class="nc bnc" id="L175" title="All 2 branches missed.">        String codigoCupom = pedido.getCodigoCupom() == null ? &quot;&quot; : pedido.getCodigoCupom().name();</span>
-<span class="nc bnc" id="L176" title="All 2 branches missed.">        String reembolsadoEm = pedido.getReembolsadoEm() == null ? &quot;&quot; : pedido.getReembolsadoEm().toString();</span>
-<span class="nc" id="L177">        String itensTexto = pedido.getItens().stream()</span>
-<span class="nc" id="L178">                .map(this::serializarItem)</span>
-<span class="nc" id="L179">                .collect(Collectors.joining(SEPARADOR_ITENS_ESCRITA));</span>
-<span class="nc" id="L180">        return String.join(SEPARADOR_CAMPO,</span>
-<span class="nc" id="L181">                pedido.getId(),</span>
-<span class="nc" id="L182">                pedido.getCriadoEm().toString(),</span>
+<span class="fc bfc" id="L175" title="All 2 branches covered.">        String codigoCupom = pedido.getCodigoCupom() == null ? &quot;&quot; : pedido.getCodigoCupom().name();</span>
+<span class="pc bpc" id="L176" title="1 of 2 branches missed.">        String reembolsadoEm = pedido.getReembolsadoEm() == null ? &quot;&quot; : pedido.getReembolsadoEm().toString();</span>
+<span class="fc" id="L177">        String itensTexto = pedido.getItens().stream()</span>
+<span class="fc" id="L178">                .map(this::serializarItem)</span>
+<span class="fc" id="L179">                .collect(Collectors.joining(SEPARADOR_ITENS_ESCRITA));</span>
+<span class="fc" id="L180">        return String.join(SEPARADOR_CAMPO,</span>
+<span class="fc" id="L181">                pedido.getId(),</span>
+<span class="fc" id="L182">                pedido.getCriadoEm().toString(),</span>
                 reembolsadoEm,
-<span class="nc" id="L184">                pedido.getStatus().name(),</span>
-<span class="nc" id="L185">                pedido.getMetodoFrete().name(),</span>
-<span class="nc" id="L186">                pedido.getMetodoPagamento().name(),</span>
+<span class="fc" id="L184">                pedido.getStatus().name(),</span>
+<span class="fc" id="L185">                pedido.getMetodoFrete().name(),</span>
+<span class="fc" id="L186">                pedido.getMetodoPagamento().name(),</span>
                 codigoCupom,
-<span class="nc" id="L188">                pedido.getSubtotal().toString(),</span>
-<span class="nc" id="L189">                pedido.getDescontoCupom().toString(),</span>
-<span class="nc" id="L190">                pedido.getDescontoPagamento().toString(),</span>
-<span class="nc" id="L191">                pedido.getImposto().toString(),</span>
-<span class="nc" id="L192">                pedido.getFrete().toString(),</span>
-<span class="nc" id="L193">                pedido.getTotal().toString(),</span>
+<span class="fc" id="L188">                pedido.getSubtotal().toString(),</span>
+<span class="fc" id="L189">                pedido.getDescontoCupom().toString(),</span>
+<span class="fc" id="L190">                pedido.getDescontoPagamento().toString(),</span>
+<span class="fc" id="L191">                pedido.getImposto().toString(),</span>
+<span class="fc" id="L192">                pedido.getFrete().toString(),</span>
+<span class="fc" id="L193">                pedido.getTotal().toString(),</span>
                 itensTexto);
     }
 
     private String serializarItem(ItemPedido item) {
-<span class="nc" id="L198">        return String.join(SEPARADOR_ITEM_CAMPO,</span>
-<span class="nc" id="L199">                item.getSku(),</span>
-<span class="nc" id="L200">                item.getNome(),</span>
-<span class="nc" id="L201">                item.getPrecoUnitario().toString(),</span>
-<span class="nc" id="L202">                String.valueOf(item.getPesoEmGramas()),</span>
-<span class="nc" id="L203">                String.valueOf(item.getQuantidade()));</span>
+<span class="fc" id="L198">        return String.join(SEPARADOR_ITEM_CAMPO,</span>
+<span class="fc" id="L199">                item.getSku(),</span>
+<span class="fc" id="L200">                item.getNome(),</span>
+<span class="fc" id="L201">                item.getPrecoUnitario().toString(),</span>
+<span class="fc" id="L202">                String.valueOf(item.getPesoEmGramas()),</span>
+<span class="fc" id="L203">                String.valueOf(item.getQuantidade()));</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.13.202504020838</span></div></body></html>

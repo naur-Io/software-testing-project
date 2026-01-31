@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="br.ufpe.cin.residencia.loja.dominio.LinhaCarrinhoTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-01-31T17:12:11.500Z" hostname="DESKTOP-C0LRCO9" time="0.0">
+<testsuite name="br.ufpe.cin.residencia.loja.dominio.LinhaCarrinhoTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-01-31T20:14:52.424Z" hostname="DESKTOP-C0LRCO9" time="0.001">
   <properties/>
-  <testcase name="pesoDaLinhaEhPesoVezesQuantidade()" classname="br.ufpe.cin.residencia.loja.dominio.LinhaCarrinhoTest" time="0.0"/>
+  <testcase name="pesoDaLinhaEhPesoVezesQuantidade()" classname="br.ufpe.cin.residencia.loja.dominio.LinhaCarrinhoTest" time="0.001"/>
   <testcase name="totalDaLinhaEhPrecoVezesQuantidade()" classname="br.ufpe.cin.residencia.loja.dominio.LinhaCarrinhoTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

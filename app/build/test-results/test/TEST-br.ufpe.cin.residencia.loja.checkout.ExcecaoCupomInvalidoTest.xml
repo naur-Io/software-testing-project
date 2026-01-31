@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="br.ufpe.cin.residencia.loja.checkout.ExcecaoCupomInvalidoTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-01-31T17:12:11.415Z" hostname="DESKTOP-C0LRCO9" time="0.003">
+<testsuite name="br.ufpe.cin.residencia.loja.checkout.ExcecaoCupomInvalidoTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-01-31T20:14:52.285Z" hostname="DESKTOP-C0LRCO9" time="0.002">
   <properties/>
-  <testcase name="deveSerRuntimeException()" classname="br.ufpe.cin.residencia.loja.checkout.ExcecaoCupomInvalidoTest" time="0.002"/>
-  <testcase name="deveCriarExcecaoComMensagem()" classname="br.ufpe.cin.residencia.loja.checkout.ExcecaoCupomInvalidoTest" time="0.001"/>
+  <testcase name="deveSerRuntimeException()" classname="br.ufpe.cin.residencia.loja.checkout.ExcecaoCupomInvalidoTest" time="0.001"/>
+  <testcase name="deveCriarExcecaoComMensagem()" classname="br.ufpe.cin.residencia.loja.checkout.ExcecaoCupomInvalidoTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

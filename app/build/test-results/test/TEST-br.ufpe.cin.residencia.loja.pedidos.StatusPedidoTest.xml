@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="br.ufpe.cin.residencia.loja.pedidos.StatusPedidoTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-01-31T17:12:11.631Z" hostname="DESKTOP-C0LRCO9" time="0.002">
+<testsuite name="br.ufpe.cin.residencia.loja.pedidos.StatusPedidoTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-01-31T20:14:52.534Z" hostname="DESKTOP-C0LRCO9" time="0.002">
   <properties/>
   <testcase name="valueOfDeveRetornarPago()" classname="br.ufpe.cin.residencia.loja.pedidos.StatusPedidoTest" time="0.0"/>
   <testcase name="valueOfDeveRetornarReembolsado()" classname="br.ufpe.cin.residencia.loja.pedidos.StatusPedidoTest" time="0.0"/>
-  <testcase name="deveConterOsDoisStatusEsperados()" classname="br.ufpe.cin.residencia.loja.pedidos.StatusPedidoTest" time="0.0"/>
+  <testcase name="deveConterOsDoisStatusEsperados()" classname="br.ufpe.cin.residencia.loja.pedidos.StatusPedidoTest" time="0.001"/>
   <testcase name="valueOfComValorInvalidoLancaExcecao()" classname="br.ufpe.cin.residencia.loja.pedidos.StatusPedidoTest" time="0.001"/>
   <testcase name="ordemDosEnumsDeveSerConsistente()" classname="br.ufpe.cin.residencia.loja.pedidos.StatusPedidoTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
