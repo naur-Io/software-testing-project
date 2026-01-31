@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PoliticaDescontoPagamento.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">app</a> &gt; <a href="index.source.html" class="el_package">br.ufpe.cin.residencia.loja.pagamento</a> &gt; <span class="el_source">PoliticaDescontoPagamento.java</span></div><h1>PoliticaDescontoPagamento.java</h1><pre class="source lang-java linenums">package br.ufpe.cin.residencia.loja.pagamento;
+
+import br.ufpe.cin.residencia.loja.descontos.CodigoCupom;
+import br.ufpe.cin.residencia.loja.descontos.Cupom;
+import br.ufpe.cin.residencia.loja.dominio.Dinheiro;
+
+import java.math.BigDecimal;
+
+<span class="fc" id="L9">public class PoliticaDescontoPagamento {</span>
+    public Dinheiro descontoPorPagamento(MetodoPagamento metodo, Cupom cupom, Dinheiro baseParaDesconto) {
+<span class="fc bfc" id="L11" title="All 4 branches covered.">        if (metodo == MetodoPagamento.CARTAO || baseParaDesconto.ehNegativo()) {</span>
+<span class="fc" id="L12">            return Dinheiro.zero();</span>
+        }
+
+<span class="fc bfc" id="L15" title="All 2 branches covered.">        if (metodo == MetodoPagamento.PIX) {</span>
+<span class="fc bfc" id="L16" title="All 4 branches covered.">            if (cupom != null &amp;&amp; (cupom.getCodigo() == CodigoCupom.PORCENTO10</span>
+<span class="pc bpc" id="L17" title="1 of 2 branches missed.">                    || cupom.getCodigo() == CodigoCupom.PORCENTO20_VIP)) {</span>
+<span class="fc" id="L18">                return Dinheiro.zero();</span>
+            }
+<span class="fc" id="L20">            return baseParaDesconto.multiplicar(new BigDecimal(&quot;0.05&quot;));</span>
+        }
+
+<span class="pc bpc" id="L23" title="1 of 2 branches missed.">        if (metodo == MetodoPagamento.BOLETO) {</span>
+<span class="pc bpc" id="L24" title="1 of 4 branches missed.">            if (cupom != null &amp;&amp; cupom.getCodigo() == CodigoCupom.DESCONTO5) {</span>
+<span class="fc" id="L25">                return Dinheiro.zero();</span>
+            }
+<span class="fc" id="L27">            return baseParaDesconto.multiplicar(new BigDecimal(&quot;0.02&quot;));</span>
+        }
+
+<span class="nc" id="L30">        return Dinheiro.zero();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.13.202504020838</span></div></body></html>

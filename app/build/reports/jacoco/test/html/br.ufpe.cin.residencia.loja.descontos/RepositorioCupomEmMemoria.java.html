@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RepositorioCupomEmMemoria.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">app</a> &gt; <a href="index.source.html" class="el_package">br.ufpe.cin.residencia.loja.descontos</a> &gt; <span class="el_source">RepositorioCupomEmMemoria.java</span></div><h1>RepositorioCupomEmMemoria.java</h1><pre class="source lang-java linenums">package br.ufpe.cin.residencia.loja.descontos;
+
+import java.time.LocalDate;
+import java.util.HashMap;
+import java.util.Map;
+
+public class RepositorioCupomEmMemoria implements RepositorioCupom {
+<span class="fc" id="L8">    private final Map&lt;CodigoCupom, Cupom&gt; cupons = new HashMap&lt;&gt;();</span>
+
+<span class="fc" id="L10">    public RepositorioCupomEmMemoria() {</span>
+<span class="fc" id="L11">        LocalDate hoje = LocalDate.now();</span>
+<span class="fc" id="L12">        cupons.put(CodigoCupom.PORCENTO10, new Cupom(CodigoCupom.PORCENTO10, hoje.plusDays(365), false, false));</span>
+<span class="fc" id="L13">        cupons.put(CodigoCupom.DESCONTO5, new Cupom(CodigoCupom.DESCONTO5, hoje.plusDays(365), false, false));</span>
+<span class="fc" id="L14">        cupons.put(CodigoCupom.FRETE_GRATIS, new Cupom(CodigoCupom.FRETE_GRATIS, hoje.plusDays(365), true, false));</span>
+<span class="fc" id="L15">        cupons.put(CodigoCupom.PORCENTO20_VIP, new Cupom(CodigoCupom.PORCENTO20_VIP, hoje.minusDays(1), false, false));</span>
+<span class="fc" id="L16">        cupons.put(CodigoCupom.DESCONTO50_ACIMA_1000, new Cupom(CodigoCupom.DESCONTO50_ACIMA_1000, hoje.plusDays(30), true, false));</span>
+<span class="fc" id="L17">    }</span>
+
+    @Override
+    public Cupom obter(CodigoCupom codigo) {
+<span class="fc" id="L21">        return cupons.get(codigo);</span>
+    }
+
+    @Override
+    public void marcarComoUsado(CodigoCupom codigo) {
+<span class="fc" id="L26">        Cupom cupom = cupons.get(codigo);</span>
+<span class="pc bpc" id="L27" title="1 of 4 branches missed.">        if (cupom != null &amp;&amp; cupom.isUsoUnico()) {</span>
+<span class="fc" id="L28">            cupom.marcarComoUsado();</span>
+        }
+<span class="fc" id="L30">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.13.202504020838</span></div></body></html>

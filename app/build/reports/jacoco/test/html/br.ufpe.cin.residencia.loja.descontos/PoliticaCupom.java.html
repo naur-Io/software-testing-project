@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PoliticaCupom.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">app</a> &gt; <a href="index.source.html" class="el_package">br.ufpe.cin.residencia.loja.descontos</a> &gt; <span class="el_source">PoliticaCupom.java</span></div><h1>PoliticaCupom.java</h1><pre class="source lang-java linenums">package br.ufpe.cin.residencia.loja.descontos;
+
+import br.ufpe.cin.residencia.loja.checkout.ExcecaoCupomExpirado;
+import br.ufpe.cin.residencia.loja.checkout.ExcecaoCupomJaUsado;
+import br.ufpe.cin.residencia.loja.checkout.ExcecaoCupomInvalido;
+import br.ufpe.cin.residencia.loja.dominio.Dinheiro;
+import br.ufpe.cin.residencia.loja.frete.MetodoFrete;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
+<span class="fc" id="L12">public class PoliticaCupom {</span>
+    public Dinheiro descontoNoSubtotal(Cupom cupom, Dinheiro subtotal) {
+<span class="fc bfc" id="L14" title="All 2 branches covered.">        if (cupom == null) {</span>
+<span class="fc" id="L15">            return Dinheiro.zero();</span>
+        }
+
+<span class="fc bfc" id="L18" title="All 5 branches covered.">        switch (cupom.getCodigo()) {</span>
+            case PORCENTO10:
+<span class="fc bfc" id="L20" title="All 2 branches covered.">                if (subtotal.maiorOuIgual(Dinheiro.of(&quot;50.00&quot;))) {</span>
+<span class="fc" id="L21">                    Dinheiro bruto = subtotal.multiplicar(new BigDecimal(&quot;0.10&quot;));</span>
+<span class="fc" id="L22">                    return bruto.min(Dinheiro.of(&quot;50.00&quot;));</span>
+                }
+<span class="fc" id="L24">                return Dinheiro.zero();</span>
+            case DESCONTO5:
+<span class="fc bfc" id="L26" title="All 2 branches covered.">                return subtotal.maiorOuIgual(Dinheiro.of(&quot;30.00&quot;)) ? Dinheiro.of(&quot;5.00&quot;) : Dinheiro.zero();</span>
+            case PORCENTO20_VIP:
+<span class="pc bpc" id="L28" title="1 of 2 branches missed.">                if (subtotal.maiorOuIgual(Dinheiro.of(&quot;300.00&quot;))) {</span>
+<span class="fc" id="L29">                    Dinheiro bruto = subtotal.multiplicar(new BigDecimal(&quot;0.20&quot;));</span>
+<span class="fc" id="L30">                    return bruto.min(Dinheiro.of(&quot;120.00&quot;));</span>
+                }
+<span class="nc" id="L32">                return Dinheiro.zero();</span>
+            case DESCONTO50_ACIMA_1000:
+<span class="fc bfc" id="L34" title="All 2 branches covered.">                return subtotal.maiorOuIgual(Dinheiro.of(&quot;1000.00&quot;)) ? Dinheiro.of(&quot;50.00&quot;) : Dinheiro.zero();</span>
+            case FRETE_GRATIS:
+            default:
+<span class="fc" id="L37">                return Dinheiro.zero();</span>
+        }
+    }
+
+    public boolean freteDeveSerGratis(Cupom cupom, MetodoFrete metodo, Dinheiro subtotal) {
+<span class="fc bfc" id="L42" title="All 2 branches covered.">        if (cupom == null) {</span>
+<span class="fc" id="L43">            return false;</span>
+        }
+<span class="pc bpc" id="L45" title="1 of 4 branches missed.">        return cupom.getCodigo() == CodigoCupom.FRETE_GRATIS</span>
+                &amp;&amp; metodo == MetodoFrete.PADRAO
+<span class="fc bfc" id="L47" title="All 2 branches covered.">                &amp;&amp; subtotal.maiorOuIgual(Dinheiro.of(&quot;150.00&quot;));</span>
+    }
+
+    public void validarCupom(Cupom cupom) {
+<span class="fc bfc" id="L51" title="All 2 branches covered.">        if (cupom == null) {</span>
+<span class="fc" id="L52">            throw new ExcecaoCupomInvalido(&quot;Cupom inexistente.&quot;);</span>
+        }
+<span class="fc" id="L54">        LocalDate hoje = LocalDate.now();</span>
+<span class="fc bfc" id="L55" title="All 2 branches covered.">        if (cupom.getValidoAte().isBefore(hoje)) {</span>
+<span class="fc" id="L56">            throw new ExcecaoCupomExpirado(&quot;Cupom expirado: &quot; + cupom.getCodigo());</span>
+        }
+<span class="fc bfc" id="L58" title="All 4 branches covered.">        if (cupom.isUsoUnico() &amp;&amp; cupom.isUsado()) {</span>
+<span class="fc" id="L59">            throw new ExcecaoCupomJaUsado(&quot;Cupom já usado: &quot; + cupom.getCodigo());</span>
+        }
+<span class="fc" id="L61">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.13.202504020838</span></div></body></html>

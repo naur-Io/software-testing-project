@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ImportadorCarrinho.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">app</a> &gt; <a href="index.source.html" class="el_package">br.ufpe.cin.residencia.loja.io</a> &gt; <span class="el_source">ImportadorCarrinho.java</span></div><h1>ImportadorCarrinho.java</h1><pre class="source lang-java linenums">package br.ufpe.cin.residencia.loja.io;
+
+import br.ufpe.cin.residencia.loja.catalogo.Catalogo;
+import br.ufpe.cin.residencia.loja.dominio.Carrinho;
+import br.ufpe.cin.residencia.loja.dominio.Item;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
+<span class="fc" id="L14">public class ImportadorCarrinho {</span>
+    private static final String CABECALHO = &quot;SKU;QTD&quot;;
+
+    public Carrinho importar(Path arquivo, Catalogo catalogo) {
+<span class="fc bfc" id="L18" title="All 2 branches covered.">        if (arquivo == null) {</span>
+<span class="fc" id="L19">            throw new ExcecaoImportacaoCarrinho(&quot;Arquivo de importação é obrigatório.&quot;);</span>
+        }
+<span class="fc bfc" id="L21" title="All 2 branches covered.">        if (catalogo == null) {</span>
+<span class="fc" id="L22">            throw new ExcecaoImportacaoCarrinho(&quot;Catálogo é obrigatório para importação.&quot;);</span>
+        }
+<span class="fc bfc" id="L24" title="All 2 branches covered.">        if (Files.notExists(arquivo)) {</span>
+<span class="fc" id="L25">            throw new ExcecaoImportacaoCarrinho(&quot;Arquivo não encontrado: &quot; + arquivo);</span>
+        }
+
+        List&lt;String&gt; linhas;
+        try {
+<span class="fc" id="L30">            linhas = Files.readAllLines(arquivo);</span>
+<span class="nc" id="L31">        } catch (IOException e) {</span>
+<span class="nc" id="L32">            throw new ExcecaoImportacaoCarrinho(&quot;Falha ao ler arquivo: &quot; + arquivo, e);</span>
+<span class="fc" id="L33">        }</span>
+
+<span class="fc" id="L35">        Map&lt;String, Integer&gt; totais = new LinkedHashMap&lt;&gt;();</span>
+<span class="fc bfc" id="L36" title="All 2 branches covered.">        for (String linha : linhas) {</span>
+<span class="fc" id="L37">            String limpa = linha.trim();</span>
+<span class="pc bpc" id="L38" title="1 of 4 branches missed.">            if (limpa.isEmpty() || limpa.equalsIgnoreCase(CABECALHO)) {</span>
+<span class="fc" id="L39">                continue;</span>
+            }
+<span class="fc" id="L41">            String[] partes = limpa.split(&quot;;&quot;);</span>
+<span class="fc bfc" id="L42" title="All 2 branches covered.">            if (partes.length != 2) {</span>
+<span class="fc" id="L43">                throw new ExcecaoImportacaoCarrinho(&quot;Linha inválida no carrinho: &quot; + linha);</span>
+            }
+<span class="fc" id="L45">            String sku = partes[0].trim();</span>
+<span class="fc" id="L46">            String quantidadeTexto = partes[1].trim();</span>
+            int quantidade;
+            try {
+<span class="fc" id="L49">                quantidade = Integer.parseInt(quantidadeTexto);</span>
+<span class="fc" id="L50">            } catch (NumberFormatException e) {</span>
+<span class="fc" id="L51">                throw new ExcecaoImportacaoCarrinho(&quot;Quantidade inválida para SKU: &quot; + sku);</span>
+<span class="fc" id="L52">            }</span>
+<span class="fc bfc" id="L53" title="All 2 branches covered.">            if (quantidade &lt;= 0) {</span>
+<span class="fc" id="L54">                throw new ExcecaoImportacaoCarrinho(&quot;Quantidade inválida para SKU: &quot; + sku);</span>
+            }
+<span class="fc" id="L56">            Item item = catalogo.obterPorSku(sku);</span>
+<span class="fc bfc" id="L57" title="All 2 branches covered.">            if (item == null) {</span>
+<span class="fc" id="L58">                throw new ExcecaoImportacaoCarrinho(&quot;SKU inexistente no catálogo: &quot; + sku);</span>
+            }
+<span class="fc" id="L60">            totais.merge(sku, quantidade, Integer::sum);</span>
+<span class="fc" id="L61">        }</span>
+
+<span class="fc bfc" id="L63" title="All 2 branches covered.">        if (totais.isEmpty()) {</span>
+<span class="fc" id="L64">            throw new ExcecaoImportacaoCarrinho(&quot;Carrinho importado está vazio.&quot;);</span>
+        }
+
+<span class="fc" id="L67">        Carrinho carrinho = new Carrinho();</span>
+<span class="fc bfc" id="L68" title="All 2 branches covered.">        for (Map.Entry&lt;String, Integer&gt; entrada : totais.entrySet()) {</span>
+<span class="fc" id="L69">            Item item = catalogo.obterPorSku(entrada.getKey());</span>
+<span class="fc" id="L70">            carrinho.adicionar(item, entrada.getValue());</span>
+<span class="fc" id="L71">        }</span>
+<span class="fc" id="L72">        return carrinho;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.13.202504020838</span></div></body></html>

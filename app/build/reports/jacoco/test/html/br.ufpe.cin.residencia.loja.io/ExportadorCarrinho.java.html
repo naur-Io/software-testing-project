@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ExportadorCarrinho.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">app</a> &gt; <a href="index.source.html" class="el_package">br.ufpe.cin.residencia.loja.io</a> &gt; <span class="el_source">ExportadorCarrinho.java</span></div><h1>ExportadorCarrinho.java</h1><pre class="source lang-java linenums">package br.ufpe.cin.residencia.loja.io;
+
+import br.ufpe.cin.residencia.loja.dominio.Carrinho;
+import br.ufpe.cin.residencia.loja.dominio.LinhaCarrinho;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+<span class="fc" id="L12">public class ExportadorCarrinho {</span>
+    private static final String CABECALHO = &quot;SKU;QTD&quot;;
+
+    public void exportar(Carrinho carrinho, Path arquivo) {
+<span class="fc bfc" id="L16" title="All 4 branches covered.">        if (carrinho == null || carrinho.vazio()) {</span>
+<span class="fc" id="L17">            throw new IllegalArgumentException(&quot;Carrinho vazio não pode ser exportado.&quot;);</span>
+        }
+<span class="fc bfc" id="L19" title="All 2 branches covered.">        if (arquivo == null) {</span>
+<span class="fc" id="L20">            throw new IllegalArgumentException(&quot;Arquivo de exportação é obrigatório.&quot;);</span>
+        }
+
+<span class="fc" id="L23">        Map&lt;String, Integer&gt; totais = new LinkedHashMap&lt;&gt;();</span>
+<span class="fc bfc" id="L24" title="All 2 branches covered.">        for (LinhaCarrinho linha : carrinho.linhas()) {</span>
+<span class="fc" id="L25">            totais.merge(linha.getItem().getSku(), linha.getQuantidade(), Integer::sum);</span>
+<span class="fc" id="L26">        }</span>
+
+<span class="fc" id="L28">        StringBuilder conteudo = new StringBuilder();</span>
+<span class="fc" id="L29">        conteudo.append(CABECALHO).append(System.lineSeparator());</span>
+<span class="fc bfc" id="L30" title="All 2 branches covered.">        for (Map.Entry&lt;String, Integer&gt; entrada : totais.entrySet()) {</span>
+<span class="fc" id="L31">            conteudo.append(entrada.getKey())</span>
+<span class="fc" id="L32">                    .append(&quot;;&quot;)</span>
+<span class="fc" id="L33">                    .append(entrada.getValue())</span>
+<span class="fc" id="L34">                    .append(System.lineSeparator());</span>
+<span class="fc" id="L35">        }</span>
+
+        try {
+<span class="fc" id="L38">            Path parent = arquivo.getParent();</span>
+<span class="pc bpc" id="L39" title="1 of 2 branches missed.">            if (parent != null) {</span>
+<span class="fc" id="L40">                Files.createDirectories(parent);</span>
+            }
+<span class="fc" id="L42">            Files.writeString(arquivo, conteudo.toString());</span>
+<span class="nc" id="L43">        } catch (IOException e) {</span>
+<span class="nc" id="L44">            throw new ExcecaoImportacaoCarrinho(&quot;Falha ao exportar carrinho: &quot; + arquivo, e);</span>
+<span class="fc" id="L45">        }</span>
+<span class="fc" id="L46">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.13.202504020838</span></div></body></html>

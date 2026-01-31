@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CatalogoArquivoCSV.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">app</a> &gt; <a href="index.source.html" class="el_package">br.ufpe.cin.residencia.loja.catalogo</a> &gt; <span class="el_source">CatalogoArquivoCSV.java</span></div><h1>CatalogoArquivoCSV.java</h1><pre class="source lang-java linenums">package br.ufpe.cin.residencia.loja.catalogo;
+
+import br.ufpe.cin.residencia.loja.dominio.Dinheiro;
+import br.ufpe.cin.residencia.loja.dominio.Item;
+import br.ufpe.cin.residencia.loja.checkout.ExcecaoSemEstoque;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.Collections;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
+public class CatalogoArquivoCSV implements Catalogo {
+<span class="nc" id="L16">    private static final String[] CAMPOS_CABECALHO = {&quot;sku&quot;, &quot;nome&quot;, &quot;preco&quot;, &quot;pesoEmGramas&quot;, &quot;estoque&quot;};</span>
+    private static final char SEPARADOR_PADRAO = ';';
+
+    private final Path arquivo;
+<span class="nc" id="L20">    private char separador = SEPARADOR_PADRAO;</span>
+<span class="nc" id="L21">    private final Map&lt;String, Item&gt; itens = new LinkedHashMap&lt;&gt;();</span>
+<span class="nc" id="L22">    private final Map&lt;String, Integer&gt; estoque = new LinkedHashMap&lt;&gt;();</span>
+
+<span class="nc" id="L24">    private CatalogoArquivoCSV(Path arquivo) {</span>
+<span class="nc" id="L25">        this.arquivo = arquivo;</span>
+<span class="nc" id="L26">    }</span>
+
+    public static CatalogoArquivoCSV carregar(Path arquivo) {
+<span class="nc" id="L29">        CatalogoArquivoCSV catalogo = new CatalogoArquivoCSV(arquivo);</span>
+<span class="nc bnc" id="L30" title="All 2 branches missed.">        if (Files.notExists(arquivo)) {</span>
+<span class="nc" id="L31">            catalogo.criarArquivoPadrao();</span>
+        }
+<span class="nc" id="L33">        catalogo.carregarDoArquivo();</span>
+<span class="nc" id="L34">        return catalogo;</span>
+    }
+
+    @Override
+    public Item obterPorSku(String sku) {
+<span class="nc" id="L39">        return itens.get(sku);</span>
+    }
+
+    @Override
+    public int estoquePara(String sku) {
+<span class="nc" id="L44">        return estoque.getOrDefault(sku, 0);</span>
+    }
+
+    @Override
+    public void baixarEstoque(String sku, int quantidade) {
+<span class="nc" id="L49">        validarMovimentacao(sku, quantidade);</span>
+<span class="nc" id="L50">        int atual = estoque.getOrDefault(sku, 0);</span>
+<span class="nc" id="L51">        int novoValor = atual - quantidade;</span>
+<span class="nc bnc" id="L52" title="All 2 branches missed.">        if (novoValor &lt; 0) {</span>
+<span class="nc" id="L53">            throw new ExcecaoSemEstoque(&quot;Sem estoque para SKU: &quot; + sku);</span>
+        }
+<span class="nc" id="L55">        estoque.put(sku, novoValor);</span>
+<span class="nc" id="L56">        salvar();</span>
+<span class="nc" id="L57">    }</span>
+
+    @Override
+    public void reporEstoque(String sku, int quantidade) {
+<span class="nc" id="L61">        validarMovimentacao(sku, quantidade);</span>
+<span class="nc" id="L62">        int atual = estoque.getOrDefault(sku, 0);</span>
+<span class="nc" id="L63">        estoque.put(sku, atual + quantidade);</span>
+<span class="nc" id="L64">        salvar();</span>
+<span class="nc" id="L65">    }</span>
+
+    public Map&lt;String, Item&gt; itens() {
+<span class="nc" id="L68">        return Collections.unmodifiableMap(itens);</span>
+    }
+
+    public void baixarEstoque(Map&lt;String, Integer&gt; itensVendidos) {
+<span class="nc bnc" id="L72" title="All 2 branches missed.">        for (Map.Entry&lt;String, Integer&gt; entrada : itensVendidos.entrySet()) {</span>
+<span class="nc" id="L73">            String sku = entrada.getKey();</span>
+<span class="nc" id="L74">            int quantidade = entrada.getValue();</span>
+<span class="nc" id="L75">            baixarEstoque(sku, quantidade);</span>
+<span class="nc" id="L76">        }</span>
+<span class="nc" id="L77">    }</span>
+
+    public void salvar() {
+<span class="nc" id="L80">        StringBuilder conteudo = new StringBuilder();</span>
+<span class="nc" id="L81">        conteudo.append(String.join(String.valueOf(separador), CAMPOS_CABECALHO))</span>
+<span class="nc" id="L82">                .append(System.lineSeparator());</span>
+<span class="nc bnc" id="L83" title="All 2 branches missed.">        for (Map.Entry&lt;String, Item&gt; entrada : itens.entrySet()) {</span>
+<span class="nc" id="L84">            String sku = entrada.getKey();</span>
+<span class="nc" id="L85">            Item item = entrada.getValue();</span>
+<span class="nc" id="L86">            int qtd = estoque.getOrDefault(sku, 0);</span>
+<span class="nc" id="L87">            conteudo.append(sku).append(separador)</span>
+<span class="nc" id="L88">                    .append(item.getNome()).append(separador)</span>
+<span class="nc" id="L89">                    .append(item.getPrecoUnitario()).append(separador)</span>
+<span class="nc" id="L90">                    .append(item.getPesoEmGramas()).append(separador)</span>
+<span class="nc" id="L91">                    .append(qtd)</span>
+<span class="nc" id="L92">                    .append(System.lineSeparator());</span>
+<span class="nc" id="L93">        }</span>
+
+        try {
+<span class="nc" id="L96">            Path parent = arquivo.getParent();</span>
+<span class="nc bnc" id="L97" title="All 2 branches missed.">            if (parent != null) {</span>
+<span class="nc" id="L98">                Files.createDirectories(parent);</span>
+            }
+<span class="nc" id="L100">            Files.writeString(arquivo, conteudo.toString());</span>
+<span class="nc" id="L101">        } catch (IOException e) {</span>
+<span class="nc" id="L102">            throw new IllegalStateException(&quot;Falha ao salvar catalogo: &quot; + arquivo, e);</span>
+<span class="nc" id="L103">        }</span>
+<span class="nc" id="L104">    }</span>
+
+    private void carregarDoArquivo() {
+<span class="nc" id="L107">        itens.clear();</span>
+<span class="nc" id="L108">        estoque.clear();</span>
+        List&lt;String&gt; linhas;
+        try {
+<span class="nc" id="L111">            linhas = Files.readAllLines(arquivo);</span>
+<span class="nc" id="L112">        } catch (IOException e) {</span>
+<span class="nc" id="L113">            throw new IllegalStateException(&quot;Falha ao ler catalogo: &quot; + arquivo, e);</span>
+<span class="nc" id="L114">        }</span>
+
+<span class="nc" id="L116">        boolean separadorDefinido = false;</span>
+<span class="nc bnc" id="L117" title="All 2 branches missed.">        for (String linha : linhas) {</span>
+<span class="nc" id="L118">            String limpa = linha.trim();</span>
+<span class="nc bnc" id="L119" title="All 2 branches missed.">            if (limpa.isEmpty()) {</span>
+<span class="nc" id="L120">                continue;</span>
+            }
+<span class="nc bnc" id="L122" title="All 2 branches missed.">            if (!separadorDefinido) {</span>
+<span class="nc" id="L123">                separador = descobrirSeparador(limpa);</span>
+<span class="nc" id="L124">                separadorDefinido = true;</span>
+            }
+<span class="nc bnc" id="L126" title="All 2 branches missed.">            if (ehCabecalho(limpa)) {</span>
+<span class="nc" id="L127">                continue;</span>
+            }
+<span class="nc" id="L129">            String[] partes = limpa.split(String.valueOf(separador));</span>
+<span class="nc bnc" id="L130" title="All 2 branches missed.">            if (partes.length != 5) {</span>
+<span class="nc" id="L131">                throw new IllegalStateException(&quot;Linha invalida no catalogo: &quot; + linha);</span>
+            }
+<span class="nc" id="L133">            String sku = partes[0].trim();</span>
+<span class="nc" id="L134">            String nome = partes[1].trim();</span>
+<span class="nc" id="L135">            String preco = partes[2].trim();</span>
+<span class="nc" id="L136">            int peso = Integer.parseInt(partes[3].trim());</span>
+<span class="nc" id="L137">            int qtd = Integer.parseInt(partes[4].trim());</span>
+<span class="nc" id="L138">            Item item = new Item(sku, nome, Dinheiro.of(preco), peso);</span>
+<span class="nc" id="L139">            itens.put(sku, item);</span>
+<span class="nc" id="L140">            estoque.put(sku, qtd);</span>
+<span class="nc" id="L141">        }</span>
+<span class="nc" id="L142">    }</span>
+
+    private void criarArquivoPadrao() {
+<span class="nc" id="L145">        CatalogoEmMemoria padrao = CatalogoEmMemoria.catalogoPadrao();</span>
+<span class="nc" id="L146">        itens.clear();</span>
+<span class="nc" id="L147">        estoque.clear();</span>
+<span class="nc" id="L148">        itens.putAll(padrao.itens());</span>
+<span class="nc" id="L149">        estoque.putAll(padrao.estoque());</span>
+<span class="nc" id="L150">        salvar();</span>
+<span class="nc" id="L151">    }</span>
+
+    private void validarMovimentacao(String sku, int quantidade) {
+<span class="nc bnc" id="L154" title="All 4 branches missed.">        if (sku == null || sku.isBlank()) {</span>
+<span class="nc" id="L155">            throw new ExcecaoSemEstoque(&quot;SKU inválido.&quot;);</span>
+        }
+<span class="nc bnc" id="L157" title="All 2 branches missed.">        if (quantidade &lt;= 0) {</span>
+<span class="nc" id="L158">            throw new ExcecaoSemEstoque(&quot;Quantidade inválida para SKU: &quot; + sku);</span>
+        }
+<span class="nc bnc" id="L160" title="All 2 branches missed.">        if (!itens.containsKey(sku)) {</span>
+<span class="nc" id="L161">            throw new ExcecaoSemEstoque(&quot;SKU inexistente no catálogo: &quot; + sku);</span>
+        }
+<span class="nc" id="L163">    }</span>
+
+    private boolean ehCabecalho(String linha) {
+<span class="nc" id="L166">        String[] campos = linha.split(String.valueOf(separador));</span>
+<span class="nc bnc" id="L167" title="All 2 branches missed.">        if (campos.length != CAMPOS_CABECALHO.length) {</span>
+<span class="nc" id="L168">            return false;</span>
+        }
+<span class="nc bnc" id="L170" title="All 2 branches missed.">        for (int i = 0; i &lt; campos.length; i++) {</span>
+<span class="nc bnc" id="L171" title="All 2 branches missed.">            if (!CAMPOS_CABECALHO[i].equalsIgnoreCase(campos[i].trim())) {</span>
+<span class="nc" id="L172">                return false;</span>
+            }
+        }
+<span class="nc" id="L175">        return true;</span>
+    }
+
+    private char descobrirSeparador(String linha) {
+<span class="nc bnc" id="L179" title="All 2 branches missed.">        if (linha.indexOf(';') &gt;= 0) {</span>
+<span class="nc" id="L180">            return ';';</span>
+        }
+<span class="nc bnc" id="L182" title="All 2 branches missed.">        if (linha.indexOf(',') &gt;= 0) {</span>
+<span class="nc" id="L183">            return ',';</span>
+        }
+<span class="nc" id="L185">        throw new IllegalStateException(&quot;Separador invalido no catalogo: &quot; + linha);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.13.202504020838</span></div></body></html>

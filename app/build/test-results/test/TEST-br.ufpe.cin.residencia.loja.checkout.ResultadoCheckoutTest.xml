@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.ufpe.cin.residencia.loja.checkout.ResultadoCheckoutTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-01-31T17:12:11.429Z" hostname="DESKTOP-C0LRCO9" time="0.005">
+  <properties/>
+  <testcase name="naoDevePermitirIdPedidoEmBranco()" classname="br.ufpe.cin.residencia.loja.checkout.ResultadoCheckoutTest" time="0.002"/>
+  <testcase name="deveCriarResultadoCheckoutComDadosValidos()" classname="br.ufpe.cin.residencia.loja.checkout.ResultadoCheckoutTest" time="0.0"/>
+  <testcase name="naoDevePermitirIdPedidoNulo()" classname="br.ufpe.cin.residencia.loja.checkout.ResultadoCheckoutTest" time="0.0"/>
+  <testcase name="naoDevePermitirReciboNulo()" classname="br.ufpe.cin.residencia.loja.checkout.ResultadoCheckoutTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

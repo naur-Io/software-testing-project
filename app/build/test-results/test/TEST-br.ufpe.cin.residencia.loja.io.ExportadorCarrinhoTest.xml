@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.ufpe.cin.residencia.loja.io.ExportadorCarrinhoTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-01-31T17:12:11.507Z" hostname="DESKTOP-C0LRCO9" time="0.053">
+  <properties/>
+  <testcase name="carrinhoVazioLancaExcecao()" classname="br.ufpe.cin.residencia.loja.io.ExportadorCarrinhoTest" time="0.026"/>
+  <testcase name="exportaSomandoQuantidadesDoMesmoSku()" classname="br.ufpe.cin.residencia.loja.io.ExportadorCarrinhoTest" time="0.007"/>
+  <testcase name="carrinhoNuloLancaExcecao()" classname="br.ufpe.cin.residencia.loja.io.ExportadorCarrinhoTest" time="0.003"/>
+  <testcase name="exportaCarrinhoComSucesso()" classname="br.ufpe.cin.residencia.loja.io.ExportadorCarrinhoTest" time="0.012"/>
+  <testcase name="arquivoNuloLancaExcecao()" classname="br.ufpe.cin.residencia.loja.io.ExportadorCarrinhoTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
