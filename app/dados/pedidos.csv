@@ -1,2 +1,2 @@
 id;criadoEm;reembolsadoEm;status;metodoFrete;metodoPagamento;codigoCupom;subtotal;descontoCupom;descontoPagamento;imposto;frete;total;itens
-123;2026-01-31T17:15:46.838198400;;PAGO;PADRAO;null;;10.00;0.00;0.00;0.00;0.00;10.00;SKU1,Item1,10.00,100,1
+123;2026-02-02T18:56:59.554957700;;PAGO;PADRAO;CARTAO;;10.00;0.00;0.00;0.00;0.00;10.00;SKU1,Item1,10.00,100,1

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="br.ufpe.cin.residencia.loja.pedidos.PedidoTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2026-01-31T20:14:52.521Z" hostname="DESKTOP-C0LRCO9" time="0.009">
+<testsuite name="br.ufpe.cin.residencia.loja.pedidos.PedidoTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2026-02-02T21:56:59.449Z" hostname="DESKTOP-C0LRCO9" time="0.013">
   <properties/>
-  <testcase name="construtorRejeitaDataCriacaoNula()" classname="br.ufpe.cin.residencia.loja.pedidos.PedidoTest" time="0.0"/>
+  <testcase name="construtorRejeitaDataCriacaoNula()" classname="br.ufpe.cin.residencia.loja.pedidos.PedidoTest" time="0.001"/>
   <testcase name="construtorRejeitaTotalNegativo()" classname="br.ufpe.cin.residencia.loja.pedidos.PedidoTest" time="0.001"/>
   <testcase name="construtorRejeitaItensNulosOuVazios()" classname="br.ufpe.cin.residencia.loja.pedidos.PedidoTest" time="0.001"/>
-  <testcase name="construtorRejeitaValoresMonetariosNulos()" classname="br.ufpe.cin.residencia.loja.pedidos.PedidoTest" time="0.001"/>
+  <testcase name="construtorRejeitaValoresMonetariosNulos()" classname="br.ufpe.cin.residencia.loja.pedidos.PedidoTest" time="0.002"/>
   <testcase name="construtorRejeitaFreteOuPagamentoNulos()" classname="br.ufpe.cin.residencia.loja.pedidos.PedidoTest" time="0.001"/>
-  <testcase name="construtorRejeitaListaDeItensNulaOuVaziaW()" classname="br.ufpe.cin.residencia.loja.pedidos.PedidoTest" time="0.0"/>
+  <testcase name="construtorRejeitaListaDeItensNulaOuVaziaW()" classname="br.ufpe.cin.residencia.loja.pedidos.PedidoTest" time="0.001"/>
   <testcase name="marcarReembolsadoAtualizaStatusEData()" classname="br.ufpe.cin.residencia.loja.pedidos.PedidoTest" time="0.0"/>
   <testcase name="marcarReembolsadoComDataNulaLancaExcecao()" classname="br.ufpe.cin.residencia.loja.pedidos.PedidoTest" time="0.001"/>
   <testcase name="construtorRejeitaIdNuloOuEmBranco()" classname="br.ufpe.cin.residencia.loja.pedidos.PedidoTest" time="0.001"/>
-  <testcase name="construtorRejeitaListaDeItensNulaOuVazia()" classname="br.ufpe.cin.residencia.loja.pedidos.PedidoTest" time="0.0"/>
-  <testcase name="marcarReembolsadoDuasVezesLancaExcecao()" classname="br.ufpe.cin.residencia.loja.pedidos.PedidoTest" time="0.0"/>
+  <testcase name="construtorRejeitaListaDeItensNulaOuVazia()" classname="br.ufpe.cin.residencia.loja.pedidos.PedidoTest" time="0.001"/>
+  <testcase name="marcarReembolsadoDuasVezesLancaExcecao()" classname="br.ufpe.cin.residencia.loja.pedidos.PedidoTest" time="0.001"/>
   <testcase name="criaPedidoComStatusEspecifico()" classname="br.ufpe.cin.residencia.loja.pedidos.PedidoTest" time="0.001"/>
   <testcase name="criaPedidoValidoComStatusPadraoPago()" classname="br.ufpe.cin.residencia.loja.pedidos.PedidoTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>

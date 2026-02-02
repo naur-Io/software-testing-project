@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="br.ufpe.cin.residencia.loja.precificacao.CalculadoraImpostoTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-01-31T20:14:52.607Z" hostname="DESKTOP-C0LRCO9" time="0.002">
+<testsuite name="br.ufpe.cin.residencia.loja.precificacao.CalculadoraImpostoTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-02-02T21:56:59.573Z" hostname="DESKTOP-C0LRCO9" time="0.002">
   <properties/>
   <testcase name="deveCalcularImpostoParaValorAlto()" classname="br.ufpe.cin.residencia.loja.precificacao.CalculadoraImpostoTest" time="0.001"/>
   <testcase name="deveCalcularImpostoParaValorBaixo()" classname="br.ufpe.cin.residencia.loja.precificacao.CalculadoraImpostoTest" time="0.0"/>
   <testcase name="impostoDeveSerZeroParaBaseNegativa()" classname="br.ufpe.cin.residencia.loja.precificacao.CalculadoraImpostoTest" time="0.0"/>
-  <testcase name="deveCalcularImpostoParaValorMinimo()" classname="br.ufpe.cin.residencia.loja.precificacao.CalculadoraImpostoTest" time="0.001"/>
+  <testcase name="deveCalcularImpostoParaValorMinimo()" classname="br.ufpe.cin.residencia.loja.precificacao.CalculadoraImpostoTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

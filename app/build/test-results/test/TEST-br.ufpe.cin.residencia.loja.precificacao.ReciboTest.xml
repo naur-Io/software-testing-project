@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="br.ufpe.cin.residencia.loja.precificacao.ReciboTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-01-31T20:14:52.609Z" hostname="DESKTOP-C0LRCO9" time="0.019">
+<testsuite name="br.ufpe.cin.residencia.loja.precificacao.ReciboTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-02-02T21:56:59.576Z" hostname="DESKTOP-C0LRCO9" time="0.023">
   <properties/>
   <testcase name="deveCriarReciboComValoresInformados()" classname="br.ufpe.cin.residencia.loja.precificacao.ReciboTest" time="0.0"/>
   <testcase name="construtor_deve_atribuir_campos()" classname="br.ufpe.cin.residencia.loja.precificacao.ReciboTest" time="0.0"/>
-  <testcase name="toStringDeveConterTodosOsValoresFormatados()" classname="br.ufpe.cin.residencia.loja.precificacao.ReciboTest" time="0.018"/>
+  <testcase name="toStringDeveConterTodosOsValoresFormatados()" classname="br.ufpe.cin.residencia.loja.precificacao.ReciboTest" time="0.023"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

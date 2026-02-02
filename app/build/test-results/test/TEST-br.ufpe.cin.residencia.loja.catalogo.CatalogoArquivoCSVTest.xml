@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="br.ufpe.cin.residencia.loja.catalogo.CatalogoArquivoCSVTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-01-31T20:14:52.130Z" hostname="DESKTOP-C0LRCO9" time="0.123">
+<testsuite name="br.ufpe.cin.residencia.loja.catalogo.CatalogoArquivoCSVTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-02-02T21:56:58.912Z" hostname="DESKTOP-C0LRCO9" time="0.162">
   <properties/>
-  <testcase name="deveBaixarEstoque()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoArquivoCSVTest" time="0.049"/>
-  <testcase name="deveObterItemPorSku()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoArquivoCSVTest" time="0.007"/>
-  <testcase name="deveLancarExcecaoParaSkuNuloOuEmBranco()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoArquivoCSVTest" time="0.006"/>
-  <testcase name="deveCriarArquivoPadraoSeNaoExistir()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoArquivoCSVTest" time="0.006"/>
-  <testcase name="deveLancarExcecaoParaQuantidadeInvalida()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoArquivoCSVTest" time="0.007"/>
-  <testcase name="deveLancarExcecaoSeLinhaInvalidaNoArquivo()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoArquivoCSVTest" time="0.007"/>
-  <testcase name="deveSalvarCatalogo()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoArquivoCSVTest" time="0.008"/>
+  <testcase name="deveBaixarEstoque()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoArquivoCSVTest" time="0.065"/>
+  <testcase name="deveObterItemPorSku()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoArquivoCSVTest" time="0.009"/>
+  <testcase name="deveLancarExcecaoParaSkuNuloOuEmBranco()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoArquivoCSVTest" time="0.007"/>
+  <testcase name="deveCriarArquivoPadraoSeNaoExistir()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoArquivoCSVTest" time="0.007"/>
+  <testcase name="deveLancarExcecaoParaQuantidadeInvalida()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoArquivoCSVTest" time="0.01"/>
+  <testcase name="deveLancarExcecaoSeLinhaInvalidaNoArquivo()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoArquivoCSVTest" time="0.008"/>
+  <testcase name="deveSalvarCatalogo()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoArquivoCSVTest" time="0.01"/>
   <testcase name="deveLancarExcecaoParaSkuInexistente()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoArquivoCSVTest" time="0.007"/>
-  <testcase name="deveLancarExcecaoSeSeparadorInvalido()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoArquivoCSVTest" time="0.008"/>
-  <testcase name="deveLancarExcecaoAoBaixarEstoqueInsuficiente()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoArquivoCSVTest" time="0.006"/>
-  <testcase name="deveReporEstoque()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoArquivoCSVTest" time="0.005"/>
+  <testcase name="deveLancarExcecaoSeSeparadorInvalido()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoArquivoCSVTest" time="0.017"/>
+  <testcase name="deveLancarExcecaoAoBaixarEstoqueInsuficiente()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoArquivoCSVTest" time="0.007"/>
+  <testcase name="deveReporEstoque()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoArquivoCSVTest" time="0.006"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

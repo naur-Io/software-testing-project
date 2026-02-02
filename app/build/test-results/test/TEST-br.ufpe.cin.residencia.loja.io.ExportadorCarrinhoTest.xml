@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="br.ufpe.cin.residencia.loja.io.ExportadorCarrinhoTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-01-31T20:14:52.430Z" hostname="DESKTOP-C0LRCO9" time="0.026">
+<testsuite name="br.ufpe.cin.residencia.loja.io.ExportadorCarrinhoTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-02-02T21:56:59.329Z" hostname="DESKTOP-C0LRCO9" time="0.036">
   <properties/>
-  <testcase name="carrinhoVazioLancaExcecao()" classname="br.ufpe.cin.residencia.loja.io.ExportadorCarrinhoTest" time="0.002"/>
-  <testcase name="exportaSomandoQuantidadesDoMesmoSku()" classname="br.ufpe.cin.residencia.loja.io.ExportadorCarrinhoTest" time="0.006"/>
+  <testcase name="carrinhoVazioLancaExcecao()" classname="br.ufpe.cin.residencia.loja.io.ExportadorCarrinhoTest" time="0.003"/>
+  <testcase name="exportaSomandoQuantidadesDoMesmoSku()" classname="br.ufpe.cin.residencia.loja.io.ExportadorCarrinhoTest" time="0.012"/>
   <testcase name="carrinhoNuloLancaExcecao()" classname="br.ufpe.cin.residencia.loja.io.ExportadorCarrinhoTest" time="0.003"/>
-  <testcase name="exportaCarrinhoComSucesso()" classname="br.ufpe.cin.residencia.loja.io.ExportadorCarrinhoTest" time="0.011"/>
+  <testcase name="exportaCarrinhoComSucesso()" classname="br.ufpe.cin.residencia.loja.io.ExportadorCarrinhoTest" time="0.012"/>
   <testcase name="arquivoNuloLancaExcecao()" classname="br.ufpe.cin.residencia.loja.io.ExportadorCarrinhoTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

@@ -1,5 +1,0 @@
-id;criadoEm;reembolsadoEm;status;metodoFrete;metodoPagamento;codigoCupom;subtotal;descontoCupom;descontoPagamento;imposto;frete;total;itens
-10;2026-01-31T14:51:20.552564900;;PAGO;PADRAO;CARTAO;;20.00;0.00;0.00;1.00;5.00;26.00;SKU1,Produto Teste,10.00,500,2
-11;2026-01-31T14:51:20.552564900;;PAGO;PADRAO;CARTAO;;20.00;0.00;0.00;1.00;5.00;26.00;SKU1,Produto Teste,10.00,500,2
-2;2026-01-31T14:51:20.545203600;;PAGO;PADRAO;CARTAO;;20.00;0.00;0.00;1.00;5.00;26.00;SKU1,Produto Teste,10.00,500,2
-1;2026-01-31T14:51:20.531108700;;PAGO;PADRAO;CARTAO;;20.00;0.00;0.00;1.00;5.00;26.00;SKU1,Produto Teste,10.00,500,2

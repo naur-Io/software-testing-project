@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="br.ufpe.cin.residencia.loja.catalogo.CatalogoEmMemoriaTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2026-01-31T20:14:52.256Z" hostname="DESKTOP-C0LRCO9" time="0.025">
+<testsuite name="br.ufpe.cin.residencia.loja.catalogo.CatalogoEmMemoriaTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2026-02-02T21:56:59.078Z" hostname="DESKTOP-C0LRCO9" time="0.038">
   <properties/>
   <testcase name="deveAdicionarItemAoCatalogo()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoEmMemoriaTest" time="0.001"/>
-  <testcase name="deveBaixarEstoqueDoMapa()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoEmMemoriaTest" time="0.005"/>
-  <testcase name="deveRetornarZeroParaSkuInexistente()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoEmMemoriaTest" time="0.001"/>
+  <testcase name="deveBaixarEstoqueDoMapa()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoEmMemoriaTest" time="0.012"/>
+  <testcase name="deveRetornarZeroParaSkuInexistente()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoEmMemoriaTest" time="0.002"/>
   <testcase name="deveRetornarMapaNaoModificavel()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoEmMemoriaTest" time="0.001"/>
-  <testcase name="baixarEstoqueComQuantidadeMaiorQueDisponivelDeveLancar()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoEmMemoriaTest" time="0.001"/>
+  <testcase name="baixarEstoqueComQuantidadeMaiorQueDisponivelDeveLancar()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoEmMemoriaTest" time="0.002"/>
   <testcase name="reporEstoqueCorretamente()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoEmMemoriaTest" time="0.001"/>
-  <testcase name="reporEstoqueComQuantidadeInvalidaDeveLancar()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoEmMemoriaTest" time="0.001"/>
-  <testcase name="deveLancarExcecaoSeSkuInvalidoNoMapa()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoEmMemoriaTest" time="0.004"/>
+  <testcase name="reporEstoqueComQuantidadeInvalidaDeveLancar()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoEmMemoriaTest" time="0.002"/>
+  <testcase name="deveLancarExcecaoSeSkuInvalidoNoMapa()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoEmMemoriaTest" time="0.003"/>
   <testcase name="reporEstoqueParaSkuInexistenteDeveLancar()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoEmMemoriaTest" time="0.001"/>
   <testcase name="baixarEstoqueComSkuNuloOuVazioDeveLancar()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoEmMemoriaTest" time="0.001"/>
-  <testcase name="baixarEstoqueComQuantidadeInvalidaDeveLancar()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoEmMemoriaTest" time="0.002"/>
-  <testcase name="baixarEstoqueParaSkuInexistenteDeveLancar()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoEmMemoriaTest" time="0.0"/>
-  <testcase name="deveBaixarEstoqueCorretamente()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoEmMemoriaTest" time="0.0"/>
+  <testcase name="baixarEstoqueComQuantidadeInvalidaDeveLancar()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoEmMemoriaTest" time="0.001"/>
+  <testcase name="baixarEstoqueParaSkuInexistenteDeveLancar()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoEmMemoriaTest" time="0.001"/>
+  <testcase name="deveBaixarEstoqueCorretamente()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoEmMemoriaTest" time="0.001"/>
   <testcase name="catalogoPadraoDeveTerItens()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoEmMemoriaTest" time="0.001"/>
   <testcase name="reporEstoqueComSkuNuloOuVazioDeveLancar()" classname="br.ufpe.cin.residencia.loja.catalogo.CatalogoEmMemoriaTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
